@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
          ViewController.debug(text:"\(#function)")
+      
     
     }
     
@@ -41,8 +42,8 @@ class ViewController: UIViewController {
         ViewController.debug(text: "\(#function)")
     }
     
- static func debug(text:String) {
-            #if DEBUG
+static func debug(text:String) {
+            #if OFF
             print(text)
             #endif
     }
