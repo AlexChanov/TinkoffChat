@@ -12,40 +12,40 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-         ViewController.debug(text:"\(#function)")
+         Debug.loggingLifeCycle(text:"\(#function)")
       
     
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        ViewController.debug(text:"\(#function)")
+        Debug.loggingLifeCycle(text:"\(#function)")
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        ViewController.debug(text: "\(#function)")
+        Debug.loggingLifeCycle(text: "\(#function)")
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        ViewController.debug(text: "\(#function)")
+        Debug.loggingLifeCycle(text: "\(#function)")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        ViewController.debug(text: "\(#function)")
+        Debug.loggingLifeCycle(text: "\(#function)")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
-        ViewController.debug(text: "\(#function)")
+        Debug.loggingLifeCycle(text: "\(#function)")
     }
     
-static func debug(text:String) {
-            #if OFF
-            print(text)
-            #endif
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        Debug.loggingLifeCycle(text: "\(#function)")
     }
+
 }
 

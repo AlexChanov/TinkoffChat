@@ -13,6 +13,7 @@
 		1CB91411220CC1C3002F1618 /* TinkoffChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1CB9140F220CC1C3002F1618 /* TinkoffChat.xcdatamodeld */; };
 		1CB91413220CC1C3002F1618 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CB91412220CC1C3002F1618 /* Assets.xcassets */; };
 		1CB91416220CC1C3002F1618 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CB91414220CC1C3002F1618 /* LaunchScreen.storyboard */; };
+		1CE34D9A2210143700CB3ED4 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE34D992210143700CB3ED4 /* Debug.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1CB91412220CC1C3002F1618 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CB91415220CC1C3002F1618 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CB91417220CC1C3002F1618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CE34D992210143700CB3ED4 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				1CB91408220CC1C3002F1618 /* AppDelegate.swift */,
 				1CB9140A220CC1C3002F1618 /* ViewController.swift */,
+				1CE34D992210143700CB3ED4 /* Debug.swift */,
 				1CB9140C220CC1C3002F1618 /* Main.storyboard */,
 				1CB91412220CC1C3002F1618 /* Assets.xcassets */,
 				1CB91414220CC1C3002F1618 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CB9140B220CC1C3002F1618 /* ViewController.swift in Sources */,
+				1CE34D9A2210143700CB3ED4 /* Debug.swift in Sources */,
 				1CB91409220CC1C3002F1618 /* AppDelegate.swift in Sources */,
 				1CB91411220CC1C3002F1618 /* TinkoffChat.xcdatamodeld in Sources */,
 			);
