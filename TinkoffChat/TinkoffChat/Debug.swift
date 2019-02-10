@@ -10,10 +10,25 @@ import Foundation
 
 class Debug {
     
-    // switch flag ON or OFF
-    static func loggingLifeCycle(text:String) {
+    
+    static func loggingLifeCycle(from: String?,to: String?, selectorFunction: String = #function) {
+        
+        var textForPrint = ""
+        
+        if from == nil,to == nil
+        {
+            textForPrint = selectorFunction
+        }
+        else if from != nil ,to != nil
+        {
+            textForPrint = "Application moved from <\(from ?? "")> to <\(to ?? "")>: <\(selectorFunction)>"
+        }
+        // switch flag ON or OFF
         #if ON
-        print(text)
+        print(textForPrint)
         #endif
+        
     }
+    
+    
 }
