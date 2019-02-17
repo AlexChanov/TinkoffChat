@@ -23,8 +23,8 @@ class Debug {
         {
             textForPrint = "Application moved from <\(from ?? "")> to <\(to ?? "")>: <\(selectorFunction)>"
         }
-        // switch flag ON or OFF
-        #if ON
+        
+        #if ENABLE_LOGS
         print(textForPrint)
         #endif
         

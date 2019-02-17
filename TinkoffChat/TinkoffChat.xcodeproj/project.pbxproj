@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1CB91409220CC1C3002F1618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB91408220CC1C3002F1618 /* AppDelegate.swift */; };
-		1CB9140B220CC1C3002F1618 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB9140A220CC1C3002F1618 /* ViewController.swift */; };
+		1CB9140B220CC1C3002F1618 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB9140A220CC1C3002F1618 /* ProfileViewController.swift */; };
 		1CB9140E220CC1C3002F1618 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CB9140C220CC1C3002F1618 /* Main.storyboard */; };
 		1CB91411220CC1C3002F1618 /* TinkoffChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1CB9140F220CC1C3002F1618 /* TinkoffChat.xcdatamodeld */; };
 		1CB91413220CC1C3002F1618 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CB91412220CC1C3002F1618 /* Assets.xcassets */; };
@@ -19,7 +19,7 @@
 /* Begin PBXFileReference section */
 		1CB91405220CC1C3002F1618 /* TinkoffChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CB91408220CC1C3002F1618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1CB9140A220CC1C3002F1618 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1CB9140A220CC1C3002F1618 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1CB9140D220CC1C3002F1618 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1CB91410220CC1C3002F1618 /* TinkoffChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TinkoffChat.xcdatamodel; sourceTree = "<group>"; };
 		1CB91412220CC1C3002F1618 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +39,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CAD8D6022187670007E5BDA /*  SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				1CB91414220CC1C3002F1618 /* LaunchScreen.storyboard */,
+				1CB91412220CC1C3002F1618 /* Assets.xcassets */,
+				1CB91417220CC1C3002F1618 /* Info.plist */,
+			);
+			name = " SupportFile";
+			sourceTree = "<group>";
+		};
 		1CB913FC220CC1C3002F1618 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +68,11 @@
 		1CB91407220CC1C3002F1618 /* TinkoffChat */ = {
 			isa = PBXGroup;
 			children = (
+				1CB9140A220CC1C3002F1618 /* ProfileViewController.swift */,
 				1CB91408220CC1C3002F1618 /* AppDelegate.swift */,
-				1CB9140A220CC1C3002F1618 /* ViewController.swift */,
 				1CE34D992210143700CB3ED4 /* Debug.swift */,
 				1CB9140C220CC1C3002F1618 /* Main.storyboard */,
-				1CB91412220CC1C3002F1618 /* Assets.xcassets */,
-				1CB91414220CC1C3002F1618 /* LaunchScreen.storyboard */,
-				1CB91417220CC1C3002F1618 /* Info.plist */,
+				1CAD8D6022187670007E5BDA /*  SupportFile */,
 				1CB9140F220CC1C3002F1618 /* TinkoffChat.xcdatamodeld */,
 			);
 			path = TinkoffChat;
@@ -141,7 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CB9140B220CC1C3002F1618 /* ViewController.swift in Sources */,
+				1CB9140B220CC1C3002F1618 /* ProfileViewController.swift in Sources */,
 				1CE34D9A2210143700CB3ED4 /* Debug.swift in Sources */,
 				1CB91409220CC1C3002F1618 /* AppDelegate.swift in Sources */,
 				1CB91411220CC1C3002F1618 /* TinkoffChat.xcdatamodeld in Sources */,
@@ -299,7 +307,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com-chanov.TinkoffChat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = ON;
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = ENABLE_LOGS;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
