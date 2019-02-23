@@ -98,8 +98,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tinkoff Chat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oj9-dq-FgM">
-                                <rect key="frame" x="16" y="80" width="343" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tinkoff Chat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oj9-dq-FgM">
+                                <rect key="frame" x="129" y="80" width="117" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="ZTZ-Io-DgI"/>
                                 </constraints>
@@ -111,15 +111,29 @@
                                 <rect key="frame" x="0.0" y="121" width="375" height="546"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XH2-7K-3DP">
+                                <rect key="frame" x="322" y="74" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XH2-7K-3DP" secondAttribute="height" multiplier="1:1" id="BqK-a9-bt8"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="2" minY="4" maxX="2" maxY="2"/>
+                                <state key="normal" title="Button" image="profileIcon"/>
+                                <connections>
+                                    <action selector="profileImage:" destination="9KO-Dm-2Fv" eventType="touchUpInside" id="KmC-yJ-G3k"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="oj9-dq-FgM" firstAttribute="centerX" secondItem="Jzp-jx-36l" secondAttribute="centerX" id="4Bp-Kv-9Il"/>
                             <constraint firstItem="oj9-dq-FgM" firstAttribute="top" secondItem="dma-F8-fnd" secondAttribute="top" constant="16" id="65o-36-rfE"/>
                             <constraint firstItem="U59-jG-chl" firstAttribute="leading" secondItem="dma-F8-fnd" secondAttribute="leading" id="Bo1-NY-cuP"/>
-                            <constraint firstItem="dma-F8-fnd" firstAttribute="trailing" secondItem="oj9-dq-FgM" secondAttribute="trailing" constant="16" id="HEE-xX-qon"/>
-                            <constraint firstItem="oj9-dq-FgM" firstAttribute="leading" secondItem="dma-F8-fnd" secondAttribute="leading" constant="16" id="Z6d-lE-40A"/>
+                            <constraint firstItem="XH2-7K-3DP" firstAttribute="leading" relation="lessThanOrEqual" secondItem="oj9-dq-FgM" secondAttribute="trailing" constant="76" id="c4g-kJ-cy5"/>
                             <constraint firstAttribute="bottom" secondItem="U59-jG-chl" secondAttribute="bottom" id="cpZ-Ef-pc4"/>
                             <constraint firstItem="U59-jG-chl" firstAttribute="top" secondItem="oj9-dq-FgM" secondAttribute="bottom" constant="8" id="e4B-Xp-Q5N"/>
+                            <constraint firstItem="dma-F8-fnd" firstAttribute="trailing" secondItem="XH2-7K-3DP" secondAttribute="trailing" constant="16" id="jRK-gL-D4s"/>
+                            <constraint firstItem="XH2-7K-3DP" firstAttribute="top" secondItem="dma-F8-fnd" secondAttribute="top" constant="10" id="nbz-u1-1sy"/>
+                            <constraint firstItem="U59-jG-chl" firstAttribute="top" secondItem="XH2-7K-3DP" secondAttribute="bottom" constant="10" id="uj4-qn-lsR"/>
                             <constraint firstItem="U59-jG-chl" firstAttribute="trailing" secondItem="dma-F8-fnd" secondAttribute="trailing" id="y18-Wa-Red"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dma-F8-fnd"/>
@@ -127,13 +141,13 @@
                     <navigationItem key="navigationItem" id="4V2-A4-LSf"/>
                     <connections>
                         <outlet property="tableView" destination="U59-jG-chl" id="wxm-nZ-iQw"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" id="4KJ-RU-LHe"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="profileSegue" id="4KJ-RU-LHe"/>
                         <segue destination="THU-qA-pp0" kind="show" identifier="chatScreenSegue" id="07V-rz-YF6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Dq-tA-LdQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1833.3333333333335" y="130.58035714285714"/>
+            <point key="canvasLocation" x="1832.8" y="129.98500749625188"/>
         </scene>
         <!--Conversation View Controller-->
         <scene sceneID="How-Nz-IUL">
@@ -171,6 +185,7 @@
     </scenes>
     <resources>
         <image name="placeholder-user" width="600" height="600"/>
+        <image name="profileIcon" width="96" height="96"/>
         <image name="slr-camera-2-xxl" width="256" height="256"/>
     </resources>
 </document>
