@@ -16,15 +16,16 @@ class ConversationsListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let cellNIB = UINib(nibName: "ListTableViewCell", bundle: nil)
-    let kcellidentifier = "ListTableViewCell"
+    let kCellidentifier = "ListTableViewCell"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(cellNIB, forCellReuseIdentifier: kcellidentifier)
+        tableView.register(cellNIB, forCellReuseIdentifier: kCellidentifier)
         tableView.dataSource = self
         tableView.delegate = self
-        // Do any additional setup after loading the view.
+        
+
     }
     
 
@@ -40,21 +41,25 @@ extension ConversationsListViewController : UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        switch section {
-        case 0:
+         if section == 0 {
             return "Online"
-        case 1:
+         }else{
             return "History"
-        default:
-            return "Error with section header"
-        }
+         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return MainAppModel.getNumberCellFor(section: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: kCellidentifier, for: indexPath) as? ListTableViewCell {
+            let model = MainAppModel.getCellModelFor(indexPath: indexPath)
+            cell.dataModel = model
+            return cell
+        }
+        //  дефолтная ячейка, по факту она возвращаться не будет
         return UITableViewCell()
     }
     
@@ -62,4 +67,7 @@ extension ConversationsListViewController : UITableViewDelegate, UITableViewData
         performSegue(withIdentifier: "chatScreenSegue", sender: self)
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
 }

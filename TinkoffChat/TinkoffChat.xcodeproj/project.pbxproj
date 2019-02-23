@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CAAA327222198CA009E8A30 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAA326222198CA009E8A30 /* Extension.swift */; };
+		1CAAA3292221992D009E8A30 /* MainAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAA3282221992D009E8A30 /* MainAppModel.swift */; };
 		1CB91409220CC1C3002F1618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB91408220CC1C3002F1618 /* AppDelegate.swift */; };
 		1CB9140B220CC1C3002F1618 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB9140A220CC1C3002F1618 /* ProfileViewController.swift */; };
 		1CB9140E220CC1C3002F1618 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CB9140C220CC1C3002F1618 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CAAA326222198CA009E8A30 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		1CAAA3282221992D009E8A30 /* MainAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppModel.swift; sourceTree = "<group>"; };
 		1CB91405220CC1C3002F1618 /* TinkoffChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CB91408220CC1C3002F1618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CB9140A220CC1C3002F1618 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				1CE34D992210143700CB3ED4 /* Debug.swift */,
+				1CAAA326222198CA009E8A30 /* Extension.swift */,
 				1CB91408220CC1C3002F1618 /* AppDelegate.swift */,
 				1CB91414220CC1C3002F1618 /* LaunchScreen.storyboard */,
 				1CB91412220CC1C3002F1618 /* Assets.xcassets */,
@@ -106,6 +111,7 @@
 		1CC58A66222130E6008C89D4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1CAAA3282221992D009E8A30 /* MainAppModel.swift */,
 				1CC58A64222130AF008C89D4 /* ListTableViewCellProtocol.swift */,
 				1CC58A6722213189008C89D4 /* ListTableViewCellDataModel.swift */,
 			);
@@ -197,7 +203,9 @@
 				1CB9140B220CC1C3002F1618 /* ProfileViewController.swift in Sources */,
 				1CC054192220541D007FEF40 /* ConversationViewController.swift in Sources */,
 				1CC58A65222130AF008C89D4 /* ListTableViewCellProtocol.swift in Sources */,
+				1CAAA327222198CA009E8A30 /* Extension.swift in Sources */,
 				1CE34D9A2210143700CB3ED4 /* Debug.swift in Sources */,
+				1CAAA3292221992D009E8A30 /* MainAppModel.swift in Sources */,
 				1CB91409220CC1C3002F1618 /* AppDelegate.swift in Sources */,
 				1CB91411220CC1C3002F1618 /* TinkoffChat.xcdatamodeld in Sources */,
 				1CC0541B22205488007FEF40 /* ConversationsListViewController.swift in Sources */,
