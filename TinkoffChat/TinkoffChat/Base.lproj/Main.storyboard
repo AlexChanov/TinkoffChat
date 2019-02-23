@@ -128,7 +128,7 @@
                     <connections>
                         <outlet property="tableView" destination="U59-jG-chl" id="wxm-nZ-iQw"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" id="4KJ-RU-LHe"/>
-                        <segue destination="THU-qA-pp0" kind="show" id="07V-rz-YF6"/>
+                        <segue destination="THU-qA-pp0" kind="show" identifier="chatScreenSegue" id="07V-rz-YF6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Dq-tA-LdQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

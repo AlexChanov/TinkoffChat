@@ -12,11 +12,13 @@ class ConversationsListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    let cellNIB = UINib(nibName: "ListTableViewCell", bundle: nil)
+    let kcellidentifier = "ListTableViewCell"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        tableView.register(cellNIB, forCellReuseIdentifier: kcellidentifier)
         tableView.dataSource = self
         tableView.delegate = self
         // Do any additional setup after loading the view.
@@ -53,6 +55,8 @@ extension ConversationsListViewController : UITableViewDelegate, UITableViewData
         return UITableViewCell()
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "chatScreenSegue", sender: self)
+    }
     
 }

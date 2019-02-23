@@ -54,6 +54,8 @@
 		1CAD8D6022187670007E5BDA /*  SupportFile */ = {
 			isa = PBXGroup;
 			children = (
+				1CE34D992210143700CB3ED4 /* Debug.swift */,
+				1CB91408220CC1C3002F1618 /* AppDelegate.swift */,
 				1CB91414220CC1C3002F1618 /* LaunchScreen.storyboard */,
 				1CB91412220CC1C3002F1618 /* Assets.xcassets */,
 				1CB91417220CC1C3002F1618 /* Info.plist */,
@@ -80,12 +82,10 @@
 		1CB91407220CC1C3002F1618 /* TinkoffChat */ = {
 			isa = PBXGroup;
 			children = (
-				1CB9140A220CC1C3002F1618 /* ProfileViewController.swift */,
-				1CB91408220CC1C3002F1618 /* AppDelegate.swift */,
-				1CE34D992210143700CB3ED4 /* Debug.swift */,
-				1CB9140C220CC1C3002F1618 /* Main.storyboard */,
-				1CC054182220541D007FEF40 /* ConversationViewController.swift */,
 				1CC0541A22205488007FEF40 /* ConversationsListViewController.swift */,
+				1CB9140A220CC1C3002F1618 /* ProfileViewController.swift */,
+				1CB9140C220CC1C3002F1618 /* Main.storyboard */,
+				1CC58A6922213361008C89D4 /* Chat Screen */,
 				1CC58A66222130E6008C89D4 /* Models */,
 				1CC0542022205A49007FEF40 /* CellTableView */,
 				1CAD8D6022187670007E5BDA /*  SupportFile */,
@@ -110,6 +110,14 @@
 				1CC58A6722213189008C89D4 /* ListTableViewCellDataModel.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		1CC58A6922213361008C89D4 /* Chat Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1CC054182220541D007FEF40 /* ConversationViewController.swift */,
+			);
+			name = "Chat Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
