@@ -17,6 +17,8 @@
 		1CC0541B22205488007FEF40 /* ConversationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC0541A22205488007FEF40 /* ConversationsListViewController.swift */; };
 		1CC0541E222059ED007FEF40 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC0541C222059ED007FEF40 /* ListTableViewCell.swift */; };
 		1CC0541F222059ED007FEF40 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CC0541D222059ED007FEF40 /* ListTableViewCell.xib */; };
+		1CC58A65222130AF008C89D4 /* ListTableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC58A64222130AF008C89D4 /* ListTableViewCellProtocol.swift */; };
+		1CC58A6822213189008C89D4 /* ListTableViewCellDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC58A6722213189008C89D4 /* ListTableViewCellDataModel.swift */; };
 		1CE34D9A2210143700CB3ED4 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE34D992210143700CB3ED4 /* Debug.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		1CC0541A22205488007FEF40 /* ConversationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsListViewController.swift; sourceTree = "<group>"; };
 		1CC0541C222059ED007FEF40 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		1CC0541D222059ED007FEF40 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		1CC58A64222130AF008C89D4 /* ListTableViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCellProtocol.swift; sourceTree = "<group>"; };
+		1CC58A6722213189008C89D4 /* ListTableViewCellDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCellDataModel.swift; sourceTree = "<group>"; };
 		1CE34D992210143700CB3ED4 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +86,7 @@
 				1CB9140C220CC1C3002F1618 /* Main.storyboard */,
 				1CC054182220541D007FEF40 /* ConversationViewController.swift */,
 				1CC0541A22205488007FEF40 /* ConversationsListViewController.swift */,
+				1CC58A66222130E6008C89D4 /* Models */,
 				1CC0542022205A49007FEF40 /* CellTableView */,
 				1CAD8D6022187670007E5BDA /*  SupportFile */,
 				1CB9140F220CC1C3002F1618 /* TinkoffChat.xcdatamodeld */,
@@ -96,6 +101,15 @@
 				1CC0541C222059ED007FEF40 /* ListTableViewCell.swift */,
 			);
 			name = CellTableView;
+			sourceTree = "<group>";
+		};
+		1CC58A66222130E6008C89D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1CC58A64222130AF008C89D4 /* ListTableViewCellProtocol.swift */,
+				1CC58A6722213189008C89D4 /* ListTableViewCellDataModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,8 +185,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CC0541E222059ED007FEF40 /* ListTableViewCell.swift in Sources */,
+				1CC58A6822213189008C89D4 /* ListTableViewCellDataModel.swift in Sources */,
 				1CB9140B220CC1C3002F1618 /* ProfileViewController.swift in Sources */,
 				1CC054192220541D007FEF40 /* ConversationViewController.swift in Sources */,
+				1CC58A65222130AF008C89D4 /* ListTableViewCellProtocol.swift in Sources */,
 				1CE34D9A2210143700CB3ED4 /* Debug.swift in Sources */,
 				1CB91409220CC1C3002F1618 /* AppDelegate.swift in Sources */,
 				1CB91411220CC1C3002F1618 /* TinkoffChat.xcdatamodeld in Sources */,
