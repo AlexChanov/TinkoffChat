@@ -11,28 +11,47 @@ import UIKit
 class ConversationViewController: UIViewController {
     
     @IBOutlet weak var namePersonLabel: UILabel!
+    @IBOutlet weak var conversationTableView: UITableView!
     
     var nameFriend : String?
+    let conversationModel = ConversationModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-            nameFriend = ConversationModel.getChatModel()?.name
-            self.namePersonLabel.text = self.nameFriend ?? ""
+        nameFriend = ConversationModel.getChatModel()?.name
+        self.namePersonLabel.text = self.nameFriend
+        conversationTableView.delegate = self
+        conversationTableView.dataSource = self
+        
+        
+    }
     
 }
-        
-        // Do any additional setup after loading the view.
+
+extension ConversationViewController: UITableViewDelegate, UITableViewDataSource{
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return  conversationModel.messageArray.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.item % 2 == 0 {
+            
+            if let inputCell = tableView.dequeueReusableCell(withIdentifier: "inputCell", for: indexPath) as? ConversationCell
+            {
+                inputCell.dataInputMessage = conversationModel.messageArray[indexPath.row]
+                return inputCell
+            }
+        } else {
+            if let outgoingCell = tableView.dequeueReusableCell(withIdentifier: "outgoingCell", for: indexPath) as? ConversationCell
+            {
+                outgoingCell.dataOutMessage = conversationModel.messageArray[indexPath.row]
+                return outgoingCell
+            }
+        }
+        return UITableViewCell()
+    }
+    
 }
