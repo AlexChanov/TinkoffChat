@@ -11,13 +11,14 @@ import Foundation
 struct MainAppModel {
     
     // массив, где мы храним наши прототимы с моделями для для ячеек онлайн секции.
-    static private let onlineСellDataPrototyps : [ListTableViewCellDataModel] = [
+    //убрал приватность чтобы использовать во второй модели
+    static let onlineСellDataPrototyps : [ListTableViewCellDataModel] = [
         ListTableViewCellDataModel(name: "Черный властелин", message: "Че каво, братишка?", date: Date.initWithString("2019-01-22 12:38:05 +0000"), online: true, hasUnreadMessage: true),
         ListTableViewCellDataModel(name: "Олег Виталич", message: "Бери картку, быстра !!!11", date: Date.initWithString("2019-02-22 14:38:05 +0000"), online: true, hasUnreadMessage: false)
     ]
     
     // массив, где мы храним наши прототимы с моделями для для ячеек офлайн секции
-    static private let offlineСellDataPrototyps : [ListTableViewCellDataModel] = [
+    static let offlineСellDataPrototyps : [ListTableViewCellDataModel] = [
         ListTableViewCellDataModel(name: "Антонина Сергеевна", message: "Сдаем по 500р Семеновне на др до четверга!", date: Date.initWithString("2019-01-19 12:38:05 +0000"), online: false, hasUnreadMessage: false)
     ]
 
@@ -39,6 +40,7 @@ struct MainAppModel {
         }
     }
 
-
+ 
+ 
 
 }

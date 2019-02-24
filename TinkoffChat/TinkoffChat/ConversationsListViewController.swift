@@ -65,6 +65,7 @@ extension ConversationsListViewController : UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "chatScreenSegue", sender: self)
+        ConversationModel.setChatId(indexPath)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -9,12 +9,20 @@
 import UIKit
 
 class ConversationViewController: UIViewController {
-
+    
+    @IBOutlet weak var namePersonLabel: UILabel!
+    
+    var nameFriend : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+            nameFriend = ConversationModel.getChatModel()?.name
+            self.namePersonLabel.text = self.nameFriend ?? ""
+    
+}
+        
         // Do any additional setup after loading the view.
-    }
     
 
     /*

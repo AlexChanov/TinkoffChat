@@ -156,9 +156,28 @@
                     <view key="view" contentMode="scaleToFill" id="RWc-Bo-HxY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLf-aq-8Zt">
+                                <rect key="frame" x="16" y="80" width="343" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="1GM-5L-NqL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.98431372549999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TLf-aq-8Zt" firstAttribute="top" secondItem="4O3-lv-kKt" secondAttribute="top" constant="16" id="NnA-bB-W4J"/>
+                            <constraint firstItem="TLf-aq-8Zt" firstAttribute="leading" secondItem="4O3-lv-kKt" secondAttribute="leading" constant="16" id="tH6-8D-Eg0"/>
+                            <constraint firstItem="4O3-lv-kKt" firstAttribute="trailing" secondItem="TLf-aq-8Zt" secondAttribute="trailing" constant="16" id="ysH-qi-ejh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4O3-lv-kKt"/>
                     </view>
+                    <connections>
+                        <outlet property="namePersonLabel" destination="TLf-aq-8Zt" id="mSl-si-iRh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q3e-Us-mRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
