@@ -23,10 +23,7 @@ class ConversationViewController: UIViewController {
         self.namePersonLabel.text = self.nameFriend
         conversationTableView.delegate = self
         conversationTableView.dataSource = self
-        
-        
     }
-    
 }
 
 extension ConversationViewController: UITableViewDelegate, UITableViewDataSource{
@@ -34,7 +31,7 @@ extension ConversationViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return  conversationModel.messageArray.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.item % 2 == 0 {

@@ -9,7 +9,7 @@
 import UIKit
 
 class ConversationsListViewController: UIViewController {
-
+    
     @IBAction func profileImage(_ sender: Any) {
         performSegue(withIdentifier: "profileSegue", sender: self)
     }
@@ -24,28 +24,24 @@ class ConversationsListViewController: UIViewController {
         tableView.register(cellNIB, forCellReuseIdentifier: kCellidentifier)
         tableView.dataSource = self
         tableView.delegate = self
-        
-
     }
-    
 
-  
 }
 
 extension ConversationsListViewController : UITableViewDelegate, UITableViewDataSource
 {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-      return 2
+        return 2
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-         if section == 0 {
+        if section == 0 {
             return "Online"
-         }else{
+        }else{
             return "History"
-         }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -91,12 +91,15 @@
 				1CB91417220CC1C3002F1618 /* Info.plist */,
 			);
 			name = " SupportFile";
+			path = TinkoffChat;
 			sourceTree = "<group>";
 		};
 		1CB913FC220CC1C3002F1618 = {
 			isa = PBXGroup;
 			children = (
 				1CB91407220CC1C3002F1618 /* TinkoffChat */,
+				1CB9140F220CC1C3002F1618 /* TinkoffChat.xcdatamodeld */,
+				1CAD8D6022187670007E5BDA /*  SupportFile */,
 				1CB91406220CC1C3002F1618 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,13 +115,11 @@
 		1CB91407220CC1C3002F1618 /* TinkoffChat */ = {
 			isa = PBXGroup;
 			children = (
-				1CB9140F220CC1C3002F1618 /* TinkoffChat.xcdatamodeld */,
 				1CC0541A22205488007FEF40 /* ConversationsListViewController.swift */,
 				1CB9140C220CC1C3002F1618 /* Main.storyboard */,
 				1CC58A66222130E6008C89D4 /* Models */,
 				1CC0542022205A49007FEF40 /* CellMainTableView */,
 				1CC58A6922213361008C89D4 /* Chat Screen */,
-				1CAD8D6022187670007E5BDA /*  SupportFile */,
 				1C22CB872222C73200B8A3B0 /* Profile Screen */,
 			);
 			path = TinkoffChat;

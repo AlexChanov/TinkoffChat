@@ -24,18 +24,15 @@ struct ConversationModel {
     }
     // setter для модели индентификатора модели чата
     static func setChatId(_ indexPath: IndexPath) {
-
+        
         userID = indexPath
     }
-
-    let messageArray: [ConversationCellModel] = [ConversationCellModel(text: "Привет как дела?"),
-                                                ConversationCellModel(text: "Замечательно как и этот вечер"),
-                                                ConversationCellModel(text: "Даа солнце светит"),
-                                                ConversationCellModel(text: "И ветер дует"),
-                                                ConversationCellModel(text: "Рассказать стих?"),
-                                                ConversationCellModel(text: "Нет"),
-                                                ConversationCellModel(text: "Я вас любил: любовь еще, быть может,в душе моей угасла не совсем, но пусть она вас больше не тревожит...")]
-
     
-
+    let messageArray: [ConversationCellModel] = [ConversationCellModel(text: "Привет как дела?"),
+                                                 ConversationCellModel(text: "Замечательно как и этот вечер"),
+                                                 ConversationCellModel(text: "Даа солнце светит"),
+                                                 ConversationCellModel(text: "И ветер дует"),
+                                                 ConversationCellModel(text: "Рассказать стих?"),
+                                                 ConversationCellModel(text: "Нет"),
+                                                 ConversationCellModel(text: "Я вас любил: любовь еще, быть может,в душе моей угасла не совсем, но пусть она вас больше не тревожит...")]
 }

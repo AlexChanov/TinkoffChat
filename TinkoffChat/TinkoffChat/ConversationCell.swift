@@ -9,7 +9,7 @@
 import UIKit
 
 class ConversationCell: UITableViewCell {
-
+    
     @IBOutlet weak var incomingMessageLabel: UILabel!
     
     @IBOutlet weak var outgoingMessageLabel: UILabel!
@@ -20,7 +20,7 @@ class ConversationCell: UITableViewCell {
             settingLabel(incomingMessageLabel)
         }
     }
-  
+    
     var dataOutMessage : MessageCellCongiguration! {
         didSet {
             outgoingMessageLabel.text = dataOutMessage.text

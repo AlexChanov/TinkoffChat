@@ -12,10 +12,10 @@ import MobileCoreServices
 class ProfileViewController: UIViewController {
     
     @IBAction func goBackButton(_ sender: Any) {
- 
+        self.dismiss(animated: true, completion: nil)
     }
     
-    
+    @IBOutlet weak var goBackOutletButton: UIButton!
     @IBOutlet weak var avatartImage: UIImageView!
     @IBOutlet weak var instalAvatarImage: UIButton!
     
@@ -62,6 +62,7 @@ class ProfileViewController: UIViewController {
         editDescriptionButton.layer.borderWidth = 1.0
         editDescriptionButton.layer.borderColor = UIColor.black.cgColor
         editDescriptionButton.backgroundColor = .white
+        goBackOutletButton.layer.cornerRadius = goBackOutletButton.frame.size.height/2.0
     }
     
 }
