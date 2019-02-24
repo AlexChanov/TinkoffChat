@@ -11,6 +11,11 @@ import MobileCoreServices
 
 class ProfileViewController: UIViewController {
     
+    @IBAction func goBackButton(_ sender: Any) {
+ 
+    }
+    
+    
     @IBOutlet weak var avatartImage: UIImageView!
     @IBOutlet weak var instalAvatarImage: UIButton!
     

@@ -11,7 +11,7 @@ import UIKit
 class ConversationsListViewController: UIViewController {
 
     @IBAction func profileImage(_ sender: Any) {
-    performSegue(withIdentifier: "profileSegue", sender: self)
+        performSegue(withIdentifier: "profileSegue", sender: self)
     }
     @IBOutlet weak var tableView: UITableView!
     
