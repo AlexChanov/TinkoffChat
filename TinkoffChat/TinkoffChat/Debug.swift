@@ -10,7 +10,7 @@ import Foundation
 
 class Debug {
     
-    
+    //HomeWork1
     static func loggingLifeCycle(from: String?,to: String?, selectorFunction: String = #function) {
         
         var textForPrint = ""

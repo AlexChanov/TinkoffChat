@@ -11,6 +11,11 @@ import MobileCoreServices
 
 class ProfileViewController: UIViewController {
     
+    @IBAction func goBackButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBOutlet weak var goBackOutletButton: UIButton!
     @IBOutlet weak var avatartImage: UIImageView!
     @IBOutlet weak var instalAvatarImage: UIButton!
     
@@ -57,6 +62,7 @@ class ProfileViewController: UIViewController {
         editDescriptionButton.layer.borderWidth = 1.0
         editDescriptionButton.layer.borderColor = UIColor.black.cgColor
         editDescriptionButton.backgroundColor = .white
+        goBackOutletButton.layer.cornerRadius = goBackOutletButton.frame.size.height/2.0
     }
     
 }
@@ -67,24 +73,19 @@ extension ProfileViewController : UINavigationControllerDelegate, UIImagePickerC
     func showCameraAlertController()
     {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
-        
         let cameraAction = UIAlertAction(title:"Камера", style: .default, handler: {
             [weak self] _ in
             self?.showImagePicker(for: .camera)
         })
-        
         let galeryAction = UIAlertAction(title: "Галерея", style: .default, handler: {
             [weak self] _ in
             self?.showImagePicker(for: .photoLibrary)
         })
-        
         let cancelAction = UIAlertAction(title: "Отмена", style: .cancel , handler: nil)
         
         alertController.addAction(cameraAction)
         alertController.addAction(galeryAction)
         alertController.addAction(cancelAction)
-        
         present(alertController, animated: true, completion: nil)
     }
     
@@ -99,23 +100,18 @@ extension ProfileViewController : UINavigationControllerDelegate, UIImagePickerC
             imagePiker.allowsEditing = false
             
             self.present(imagePiker, animated: true, completion: nil)
-            
         }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         let mediaType = info[UIImagePickerController.InfoKey.mediaType] as! String
-        
         self.dismiss(animated: true, completion: nil)
-        
+
         if mediaType.isEqual(kUTTypeImage as String){
-            
             let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
             avatartImage.image = image
-            
         }
-        
     }
     
 }
