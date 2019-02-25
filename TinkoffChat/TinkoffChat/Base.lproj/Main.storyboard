@@ -221,12 +221,12 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="outgoingCell" rowHeight="68" id="vaf-EV-1iX" customClass="ConversationCell" customModule="TinkoffChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="97" width="375" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vaf-EV-1iX" id="b4R-PH-s0M">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vaf-EV-1iX" id="b4R-PH-s0M">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Исходящие сообщения" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb5-HJ-Gww" customClass="c">
-                                                    <rect key="frame" x="79" y="19.5" width="281" height="20.5"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Исходящие сообщения" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb5-HJ-Gww" customClass="c">
+                                                    <rect key="frame" x="79" y="20" width="281" height="33"/>
                                                     <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="xrE-Cu-B3f"/>
@@ -239,6 +239,7 @@
                                             <constraints>
                                                 <constraint firstItem="bb5-HJ-Gww" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="b4R-PH-s0M" secondAttribute="leading" constant="20" symbolic="YES" id="1Ye-at-gGt"/>
                                                 <constraint firstItem="bb5-HJ-Gww" firstAttribute="trailing" secondItem="b4R-PH-s0M" secondAttribute="trailingMargin" id="HiD-06-LiK"/>
+                                                <constraint firstItem="bb5-HJ-Gww" firstAttribute="top" secondItem="b4R-PH-s0M" secondAttribute="topMargin" constant="9" id="VOK-af-Sz4"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="bb5-HJ-Gww" secondAttribute="bottom" constant="9" id="aTu-qi-8Uw"/>
                                                 <constraint firstItem="bb5-HJ-Gww" firstAttribute="width" secondItem="b4R-PH-s0M" secondAttribute="width" multiplier="3/4" id="v3v-Qz-te8"/>
                                                 <constraint firstItem="bb5-HJ-Gww" firstAttribute="centerY" secondItem="b4R-PH-s0M" secondAttribute="centerY" id="vWw-Tx-g0I"/>
