@@ -13,7 +13,7 @@ struct ConversationModel {
     static private var userID : IndexPath?
     
     // getter для модели чата
-    static func getChatModel() -> ListTableViewCellProtocol? { // это пример. Нужна отдельная модель для экрана чата
+    static func getChatModel() -> ListTableViewCellProtocol? { 
         guard let indexPath = userID else { return nil }
         
         if indexPath.section == 0 {

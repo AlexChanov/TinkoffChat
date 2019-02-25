@@ -11,7 +11,7 @@ import Foundation
 struct MainAppModel {
     
     // массив, где мы храним наши прототимы с моделями для для ячеек онлайн секции.
-    //убрал приватность чтобы использовать во второй модели
+
     static let onlineСellDataPrototyps : [ListTableViewCellDataModel] = [
         ListTableViewCellDataModel(name: "Черный властелин", message: "Че каво, братишка?", date: Date.initWithString("2019-01-22 12:38:05 +0000"), online: true, hasUnreadMessage: true),
         ListTableViewCellDataModel(name: "Олег Виталич", message: nil, date: Date.initWithString("2019-02-22 14:38:05 +0000"), online: true, hasUnreadMessage: false),
