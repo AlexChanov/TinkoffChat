@@ -68,3 +68,25 @@ extension ConversationsListViewController : UITableViewDelegate, UITableViewData
         return 70
     }
 }
+
+
+extension ConversationsListViewController {
+    @IBAction func presentThems(){
+        let themesVC = ThemesViewController()
+        themesVC.delegate = self
+        present (themesVC,animated: true)
+        
+    }
+    
+}
+
+extension ConversationsListViewController : ThemesViewControllerDelegate {
+    func themesViewController(_ controller: ThemesViewController, didSelectTheme selectedTheme: UIColor) {
+        
+        logThemeChanging(selectedTheme: selectedTheme)
+    }
+    
+    func logThemeChanging(selectedTheme: UIColor){
+        print("Selcted theme \(selectedTheme)")
+    }
+}

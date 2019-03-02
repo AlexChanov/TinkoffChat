@@ -157,7 +157,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dma-F8-fnd"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4V2-A4-LSf"/>
+                    <navigationItem key="navigationItem" id="4V2-A4-LSf">
+                        <barButtonItem key="leftBarButtonItem" title="Темы" style="plain" id="m6g-8z-Zew"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="U59-jG-chl" id="wxm-nZ-iQw"/>
                         <segue destination="THU-qA-pp0" kind="show" identifier="chatScreenSegue" id="07V-rz-YF6"/>
