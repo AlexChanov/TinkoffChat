@@ -135,7 +135,7 @@
                                     <constraint firstAttribute="width" secondItem="XH2-7K-3DP" secondAttribute="height" multiplier="1:1" id="BqK-a9-bt8"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="2" minY="4" maxX="2" maxY="2"/>
-                                <state key="normal" title="Button" image="profileIcon"/>
+                                <state key="normal" title="Button" image="slr-camera-2-xxl"/>
                                 <connections>
                                     <action selector="profileImage:" destination="9KO-Dm-2Fv" eventType="touchUpInside" id="KmC-yJ-G3k"/>
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="profileSegue" id="xDV-eZ-oBr"/>
@@ -294,7 +294,6 @@
     </scenes>
     <resources>
         <image name="placeholder-user" width="600" height="600"/>
-        <image name="profileIcon" width="96" height="96"/>
         <image name="slr-camera-2-xxl" width="256" height="256"/>
     </resources>
 </document>
