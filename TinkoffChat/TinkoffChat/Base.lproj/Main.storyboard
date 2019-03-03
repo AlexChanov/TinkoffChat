@@ -108,6 +108,82 @@
             </objects>
             <point key="canvasLocation" x="1832.8" y="864.91754122938539"/>
         </scene>
+        <!--Themes View Controller-->
+        <scene sceneID="x4a-sK-GFE">
+            <objects>
+                <viewController id="tHZ-EO-v3Q" customClass="ThemesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="24i-Wr-3L8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UP8-de-2bL">
+                                <rect key="frame" x="137.5" y="224" width="100" height="33"/>
+                                <color key="backgroundColor" red="1" green="0.98431372549999996" blue="0.77086900680000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="Djc-7n-X6Z"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Xja-DB-omb"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="button1Tap:" destination="tHZ-EO-v3Q" eventType="touchUpInside" id="806-OO-Och"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPF-jQ-EDS">
+                                <rect key="frame" x="137.5" y="317" width="100" height="33"/>
+                                <color key="backgroundColor" red="1" green="0.98431372549999996" blue="0.77086900680000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="BGZ-zv-Q8d"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="button2Tap:" destination="tHZ-EO-v3Q" eventType="touchUpInside" id="ReB-El-f2Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzV-RW-ta4">
+                                <rect key="frame" x="137.5" y="410" width="100" height="33"/>
+                                <color key="backgroundColor" red="1" green="0.98431372549999996" blue="0.77086900680000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="PNL-HI-2Fx"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="button3Tap:" destination="tHZ-EO-v3Q" eventType="touchUpInside" id="KvF-se-wAg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxI-mi-sgg">
+                                <rect key="frame" x="279" y="36" width="80" height="33"/>
+                                <color key="backgroundColor" red="1" green="0.98431372549999996" blue="0.77086900680000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="Na6-Zd-zwk"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="Закрыть"/>
+                                <connections>
+                                    <action selector="closeButtonAction:" destination="tHZ-EO-v3Q" eventType="touchUpInside" id="D7m-7K-8NO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90098047256469727" green="0.67450982332229614" blue="0.057843141257762909" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="UP8-de-2bL" firstAttribute="centerX" secondItem="24i-Wr-3L8" secondAttribute="centerX" id="0nz-nF-lT3"/>
+                            <constraint firstItem="vPF-jQ-EDS" firstAttribute="width" secondItem="UP8-de-2bL" secondAttribute="width" id="LYS-wH-KFD"/>
+                            <constraint firstItem="zzV-RW-ta4" firstAttribute="top" secondItem="vPF-jQ-EDS" secondAttribute="bottom" constant="60" id="Qvh-mp-TyL"/>
+                            <constraint firstItem="vPF-jQ-EDS" firstAttribute="centerX" secondItem="24i-Wr-3L8" secondAttribute="centerX" id="Ssv-Qm-LbH"/>
+                            <constraint firstItem="oxI-mi-sgg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tFN-U0-tT0" secondAttribute="leading" symbolic="YES" id="YVf-sB-7P3"/>
+                            <constraint firstItem="vPF-jQ-EDS" firstAttribute="centerY" secondItem="24i-Wr-3L8" secondAttribute="centerY" id="aed-pZ-6Oh"/>
+                            <constraint firstItem="tFN-U0-tT0" firstAttribute="trailing" secondItem="oxI-mi-sgg" secondAttribute="trailing" constant="16" id="bJn-HX-42u"/>
+                            <constraint firstItem="vPF-jQ-EDS" firstAttribute="top" secondItem="UP8-de-2bL" secondAttribute="bottom" constant="60" id="g74-Xd-r4e"/>
+                            <constraint firstItem="zzV-RW-ta4" firstAttribute="centerX" secondItem="24i-Wr-3L8" secondAttribute="centerX" id="jJl-2e-enZ"/>
+                            <constraint firstItem="oxI-mi-sgg" firstAttribute="top" secondItem="tFN-U0-tT0" secondAttribute="top" constant="16" id="sUS-e4-NUL"/>
+                            <constraint firstItem="zzV-RW-ta4" firstAttribute="width" secondItem="UP8-de-2bL" secondAttribute="width" id="sbB-mP-FNv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tFN-U0-tT0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q3L-6u-eaP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2568.8000000000002" y="856.82158920539734"/>
+        </scene>
         <!--Conversations List View Controller-->
         <scene sceneID="9SJ-wc-r7Q">
             <objects>
@@ -158,7 +234,12 @@
                         <viewLayoutGuide key="safeArea" id="dma-F8-fnd"/>
                     </view>
                     <navigationItem key="navigationItem" id="4V2-A4-LSf">
-                        <barButtonItem key="leftBarButtonItem" title="Темы" style="plain" id="m6g-8z-Zew"/>
+                        <barButtonItem key="leftBarButtonItem" title="Темы" style="plain" id="m6g-8z-Zew">
+                            <connections>
+                                <action selector="presentThems" destination="9KO-Dm-2Fv" id="TBk-JK-mJq"/>
+                                <segue destination="tHZ-EO-v3Q" kind="presentation" id="cra-gk-cLo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="U59-jG-chl" id="wxm-nZ-iQw"/>
@@ -227,7 +308,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Исходящие сообщения" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb5-HJ-Gww" customClass="c">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Исходящие сообщения" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb5-HJ-Gww">
                                                     <rect key="frame" x="79" y="20" width="281" height="33"/>
                                                     <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>

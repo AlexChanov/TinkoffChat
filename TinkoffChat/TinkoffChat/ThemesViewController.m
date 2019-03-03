@@ -9,11 +9,11 @@
 #import "ThemesViewController.h"
 
 @interface ThemesViewController (){
-
-id<ThemesViewControllerDelegate> _delegate;
+    
+    id<ThemesViewControllerDelegate> _delegate;
     Themes *_model ;
     
-
+    
 }
 @end
 
@@ -22,20 +22,34 @@ id<ThemesViewControllerDelegate> _delegate;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.model = [Themes new];
 }
 
-- (IBAction)button1Tap:(id)sender{
+
+-(IBAction)closeButtonAction:(id)sender{
+    [self.presentingViewController dismissViewControllerAnimated:YES
+completion:nil];
+}
+
+-(void)checkAndCallDelegateWithColor:(UIColor *)color{
     if ([self.delegate
          respondsToSelector: @selector(themesViewController:didSelectTheme:)])
     {
-        [self.delegate themesViewController:self didSelectTheme:self.model.theme1];
+        [self.delegate themesViewController:self didSelectTheme:color];
     }
-        }
-- (IBAction)button2Tap:(id)sender{
-    
+    self.view.backgroundColor = color;
 }
+
+- (IBAction)button1Tap:(id)sender{
+    [self checkAndCallDelegateWithColor:self.model.theme1];
+}
+
+- (IBAction)button2Tap:(id)sender{
+    [self checkAndCallDelegateWithColor:self.model.theme2];
+}
+
 - (IBAction)button3Tap:(id)sender{
-    
+    [self checkAndCallDelegateWithColor:self.model.theme3];
 }
 
 - (id<ThemesViewControllerDelegate>)delegate{

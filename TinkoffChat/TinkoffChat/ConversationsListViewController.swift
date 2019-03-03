@@ -70,18 +70,27 @@ extension ConversationsListViewController : UITableViewDelegate, UITableViewData
 }
 
 
+//extension ConversationsListViewController {
+//    @IBAction func presentThems(){
+//        let themesVC = ThemesViewController()
+//        themesVC.delegate = self
+//        present (themesVC,animated: true)
+//
+//    }
+//
+//}
+
 extension ConversationsListViewController {
-    @IBAction func presentThems(){
-        let themesVC = ThemesViewController()
-        themesVC.delegate = self
-        present (themesVC,animated: true)
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let themesVC = segue.destination as? ThemesViewController  {
+            themesVC.delegate = self
+        }
     }
-    
 }
 
 extension ConversationsListViewController : ThemesViewControllerDelegate {
-    func themesViewController(_ controller: ThemesViewController, didSelectTheme selectedTheme: UIColor) {
+    func themesViewController(_ controller: ThemesViewController,
+                              didSelectTheme selectedTheme: UIColor) {
         
         logThemeChanging(selectedTheme: selectedTheme)
     }
