@@ -184,7 +184,7 @@
             </objects>
             <point key="canvasLocation" x="2568.8000000000002" y="856.82158920539734"/>
         </scene>
-        <!--Conversations List View Controller-->
+        <!--Tinkoff Chat-->
         <scene sceneID="9SJ-wc-r7Q">
             <objects>
                 <viewController id="9KO-Dm-2Fv" customClass="ConversationsListViewController" customModule="TinkoffChat" customModuleProvider="target" sceneMemberID="viewController">
@@ -192,52 +192,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tinkoff Chat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oj9-dq-FgM">
-                                <rect key="frame" x="129" y="80" width="117" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="ZTZ-Io-DgI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.98431372549019602" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U59-jG-chl">
-                                <rect key="frame" x="0.0" y="121" width="375" height="546"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XH2-7K-3DP">
-                                <rect key="frame" x="322" y="74" width="37" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="XH2-7K-3DP" secondAttribute="height" multiplier="1:1" id="BqK-a9-bt8"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="2" minY="4" maxX="2" maxY="2"/>
-                                <state key="normal" title="Button" image="profileIcon"/>
-                                <connections>
-                                    <action selector="profileImage:" destination="9KO-Dm-2Fv" eventType="touchUpInside" id="KmC-yJ-G3k"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="profileSegue" id="xDV-eZ-oBr"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="oj9-dq-FgM" firstAttribute="centerX" secondItem="Jzp-jx-36l" secondAttribute="centerX" id="4Bp-Kv-9Il"/>
-                            <constraint firstItem="oj9-dq-FgM" firstAttribute="top" secondItem="dma-F8-fnd" secondAttribute="top" constant="16" id="65o-36-rfE"/>
                             <constraint firstItem="U59-jG-chl" firstAttribute="leading" secondItem="dma-F8-fnd" secondAttribute="leading" id="Bo1-NY-cuP"/>
-                            <constraint firstItem="XH2-7K-3DP" firstAttribute="leading" relation="lessThanOrEqual" secondItem="oj9-dq-FgM" secondAttribute="trailing" constant="76" id="c4g-kJ-cy5"/>
                             <constraint firstAttribute="bottom" secondItem="U59-jG-chl" secondAttribute="bottom" id="cpZ-Ef-pc4"/>
-                            <constraint firstItem="U59-jG-chl" firstAttribute="top" secondItem="oj9-dq-FgM" secondAttribute="bottom" constant="8" id="e4B-Xp-Q5N"/>
-                            <constraint firstItem="dma-F8-fnd" firstAttribute="trailing" secondItem="XH2-7K-3DP" secondAttribute="trailing" constant="16" id="jRK-gL-D4s"/>
-                            <constraint firstItem="XH2-7K-3DP" firstAttribute="top" secondItem="dma-F8-fnd" secondAttribute="top" constant="10" id="nbz-u1-1sy"/>
-                            <constraint firstItem="U59-jG-chl" firstAttribute="top" secondItem="XH2-7K-3DP" secondAttribute="bottom" constant="10" id="uj4-qn-lsR"/>
+                            <constraint firstItem="U59-jG-chl" firstAttribute="top" secondItem="dma-F8-fnd" secondAttribute="top" id="k6M-oW-0Lm"/>
                             <constraint firstItem="U59-jG-chl" firstAttribute="trailing" secondItem="dma-F8-fnd" secondAttribute="trailing" id="y18-Wa-Red"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dma-F8-fnd"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4V2-A4-LSf">
-                        <barButtonItem key="leftBarButtonItem" title="Темы" style="plain" id="m6g-8z-Zew">
+                    <navigationItem key="navigationItem" title="Tinkoff Chat" id="4V2-A4-LSf">
+                        <barButtonItem key="leftBarButtonItem" title="Темы" style="done" id="m6g-8z-Zew">
                             <connections>
                                 <action selector="presentThems" destination="9KO-Dm-2Fv" id="TBk-JK-mJq"/>
                                 <segue destination="tHZ-EO-v3Q" kind="presentation" id="cra-gk-cLo"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Профиль" image="profileIcon" style="done" id="yga-jb-PUz">
+                            <inset key="imageInsets" minX="19" minY="0.0" maxX="-7" maxY="-3"/>
+                            <inset key="landscapeImageInsets" minX="0.0" minY="0.0" maxX="-1" maxY="0.0"/>
+                            <connections>
+                                <action selector="openProfile:" destination="9KO-Dm-2Fv" id="qRD-5Y-FnZ"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="profileSegue" id="Ca8-hk-Xv4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -10,9 +10,11 @@ import UIKit
 
 class ConversationsListViewController: UIViewController {
     
-    @IBAction func profileImage(_ sender: Any) {
+    
+    @IBAction func openProfile(_ sender: Any) {
         performSegue(withIdentifier: "profileSegue", sender: self)
     }
+    
     @IBOutlet weak var tableView: UITableView!
     
     let cellNIB = UINib(nibName: "ListTableViewCell", bundle: nil)
