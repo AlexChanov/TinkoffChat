@@ -111,32 +111,32 @@
         <!--Themes View Controller-->
         <scene sceneID="x4a-sK-GFE">
             <objects>
-                <viewController id="tHZ-EO-v3Q" customClass="ThemesViewController" sceneMemberID="viewController">
+                <viewController id="tHZ-EO-v3Q" customClass="ThemesViewController" customModule="TinkoffChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="24i-Wr-3L8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UP8-de-2bL">
                                 <rect key="frame" x="137.5" y="224" width="100" height="33"/>
-                                <color key="backgroundColor" red="1" green="0.98431372549999996" blue="0.77086900680000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.98431372549019602" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="Djc-7n-X6Z"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Xja-DB-omb"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Тема 1"/>
                                 <connections>
-                                    <action selector="button1Tap:" destination="tHZ-EO-v3Q" eventType="touchUpInside" id="806-OO-Och"/>
+                                    <action selector="theme1Tap:" destination="tHZ-EO-v3Q" eventType="touchUpInside" id="IIS-H1-qR9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPF-jQ-EDS">
                                 <rect key="frame" x="137.5" y="317" width="100" height="33"/>
-                                <color key="backgroundColor" red="1" green="0.98431372549999996" blue="0.77086900680000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.98431372549999996" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="BGZ-zv-Q8d"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Тема 2"/>
                                 <connections>
-                                    <action selector="button2Tap:" destination="tHZ-EO-v3Q" eventType="touchUpInside" id="ReB-El-f2Z"/>
+                                    <action selector="theme2Tap:" destination="tHZ-EO-v3Q" eventType="touchUpInside" id="f0H-td-pj8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzV-RW-ta4">
@@ -145,9 +145,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="PNL-HI-2Fx"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Тема 3"/>
                                 <connections>
-                                    <action selector="button3Tap:" destination="tHZ-EO-v3Q" eventType="touchUpInside" id="KvF-se-wAg"/>
+                                    <action selector="theme3Tap:" destination="tHZ-EO-v3Q" eventType="touchUpInside" id="ZnY-cr-MEK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxI-mi-sgg">
@@ -159,7 +159,7 @@
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <state key="normal" title="Закрыть"/>
                                 <connections>
-                                    <action selector="closeButtonAction:" destination="tHZ-EO-v3Q" eventType="touchUpInside" id="D7m-7K-8NO"/>
+                                    <action selector="closeTap:" destination="tHZ-EO-v3Q" eventType="touchUpInside" id="jbf-ye-QJm"/>
                                 </connections>
                             </button>
                         </subviews>

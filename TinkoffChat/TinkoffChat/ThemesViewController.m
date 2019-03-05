@@ -8,63 +8,62 @@
 
 #import "ThemesViewController.h"
 
-@interface ThemesViewController (){
-    
+@interface ThemesViewController () {
     id<ThemesViewControllerDelegate> _delegate;
-    Themes *_model ;
-    
-    
+    Themes *_model;
 }
+
 @end
 
 @implementation ThemesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
     self.model = [Themes new];
 }
 
-
--(IBAction)closeButtonAction:(id)sender{
+- (IBAction)closeTap:(id)sender {
     [self.presentingViewController dismissViewControllerAnimated:YES
-completion:nil];
+                                                      completion:nil];
 }
 
--(void)checkAndCallDelegateWithColor:(UIColor *)color{
+- (void)applyColor:(UIColor *)color {
     if ([self.delegate
-         respondsToSelector: @selector(themesViewController:didSelectTheme:)])
+         respondsToSelector:@selector(themesViewController:didSelectTheme:)])
     {
         [self.delegate themesViewController:self didSelectTheme:color];
     }
     self.view.backgroundColor = color;
 }
 
-- (IBAction)button1Tap:(id)sender{
-    [self checkAndCallDelegateWithColor:self.model.theme1];
+- (IBAction)theme1Tap:(id)sender {
+    [self applyColor:self.model.theme1];
 }
 
-- (IBAction)button2Tap:(id)sender{
-    [self checkAndCallDelegateWithColor:self.model.theme2];
+- (IBAction)theme2Tap:(id)sender {
+    [self applyColor:self.model.theme2];
 }
 
-- (IBAction)button3Tap:(id)sender{
-    [self checkAndCallDelegateWithColor:self.model.theme3];
+- (IBAction)theme3Tap:(id)sender {
+    [self applyColor:self.model.theme3];
 }
 
-- (id<ThemesViewControllerDelegate>)delegate{
+- (id<ThemesViewControllerDelegate>)delegate {
     return _delegate;
 }
 
-- (void)setDelegate:(id<ThemesViewControllerDelegate>)delegate{
+- (void)setDelegate:(id<ThemesViewControllerDelegate>)delegate {
     _delegate = delegate;
 }
 
+- (Themes *)model {
+    return _model;
+}
 
--(void)setModel:(Themes *)model {
-    
-    Themes *tmpMpdel = _model;
+- (void)setModel:(Themes *)model {
+    Themes *tmpModel = _model;
     _model = [model retain];
-    [tmpMpdel release];
+    [tmpModel release];
 }
 @end

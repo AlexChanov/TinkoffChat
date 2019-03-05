@@ -53,11 +53,14 @@
     [tmpTheme3 release];
 }
 
+
+
 - (instancetype)init {
     if (self = [super init]) {
-        self.theme1 = UIColor.redColor;
-        self.theme2 = UIColor.greenColor;
-        self.theme3 = UIColor.blueColor;
+        UIColor *lightGrayHeader = [UIColor colorWithRed:255/255.f green:226/255.f blue:176/255.f alpha:1.0];
+        self.theme1 = UIColor.whiteColor;
+        self.theme2 = UIColor.darkGrayColor;
+        self.theme3 = lightGrayHeader;
     }
     
     return self;

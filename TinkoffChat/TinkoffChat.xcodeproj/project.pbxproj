@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C2B4448222A736400555636 /* ThemesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B4447222A736400555636 /* ThemesViewController.m */; };
 		1CA3105B2222DD0800A9B154 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA3105A2222DD0800A9B154 /* ConversationCell.swift */; };
 		1CA3105D2222E13C00A9B154 /* ConversationCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA3105C2222E13C00A9B154 /* ConversationCellProtocol.swift */; };
 		1CA3105F2222E20800A9B154 /* ConversationCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA3105E2222E20800A9B154 /* ConversationCellModel.swift */; };
@@ -27,6 +26,8 @@
 		1CC0541F222059ED007FEF40 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CC0541D222059ED007FEF40 /* ListTableViewCell.xib */; };
 		1CC58A65222130AF008C89D4 /* ListTableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC58A64222130AF008C89D4 /* ListTableViewCellProtocol.swift */; };
 		1CC58A6822213189008C89D4 /* ListTableViewCellDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC58A6722213189008C89D4 /* ListTableViewCellDataModel.swift */; };
+		1CD56084222F222800609E1C /* ThemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD56079222F0ABB00609E1C /* ThemesViewController.swift */; };
+		1CD56085222F229400609E1C /* UserDefaults+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD5607B222F0F4500609E1C /* UserDefaults+Color.swift */; };
 		1CE34D9A2210143700CB3ED4 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE34D992210143700CB3ED4 /* Debug.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,8 @@
 		1CC0541D222059ED007FEF40 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		1CC58A64222130AF008C89D4 /* ListTableViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCellProtocol.swift; sourceTree = "<group>"; };
 		1CC58A6722213189008C89D4 /* ListTableViewCellDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCellDataModel.swift; sourceTree = "<group>"; };
+		1CD56079222F0ABB00609E1C /* ThemesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesViewController.swift; sourceTree = "<group>"; };
+		1CD5607B222F0F4500609E1C /* UserDefaults+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Color.swift"; sourceTree = "<group>"; };
 		1CE34D992210143700CB3ED4 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +136,8 @@
 				1C2B4447222A736400555636 /* ThemesViewController.m */,
 				1CB3B227222AD0D000F007C8 /* ThemesViewControllerDelegate.h */,
 				1C2B4445222A736400555636 /* TinkoffChat-Bridging-Header.h */,
+				1CD56079222F0ABB00609E1C /* ThemesViewController.swift */,
+				1CD5607B222F0F4500609E1C /* UserDefaults+Color.swift */,
 			);
 			path = TinkoffChat;
 			sourceTree = "<group>";
@@ -243,13 +248,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CA3105D2222E13C00A9B154 /* ConversationCellProtocol.swift in Sources */,
+				1CD56084222F222800609E1C /* ThemesViewController.swift in Sources */,
 				1CC0541E222059ED007FEF40 /* ListTableViewCell.swift in Sources */,
 				1CA3105F2222E20800A9B154 /* ConversationCellModel.swift in Sources */,
 				1CC58A6822213189008C89D4 /* ListTableViewCellDataModel.swift in Sources */,
 				1CB9140B220CC1C3002F1618 /* ProfileViewController.swift in Sources */,
+				1CD56085222F229400609E1C /* UserDefaults+Color.swift in Sources */,
 				1CC054192220541D007FEF40 /* ConversationViewController.swift in Sources */,
 				1CB3B22A222AD55400F007C8 /* Themes.m in Sources */,
-				1C2B4448222A736400555636 /* ThemesViewController.m in Sources */,
 				1CC58A65222130AF008C89D4 /* ListTableViewCellProtocol.swift in Sources */,
 				1CAAA327222198CA009E8A30 /* Extension.swift in Sources */,
 				1CE34D9A2210143700CB3ED4 /* Debug.swift in Sources */,

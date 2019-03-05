@@ -71,33 +71,35 @@ extension ConversationsListViewController : UITableViewDelegate, UITableViewData
     }
 }
 
+/*
+ По тегам "Закоментить при обж-с сборке" и "Разкоментировать при Обж-С сборке" можно найти части кода, которые необходимо закоментить/разкоментить. Так-же необходимо перевыбирать в storyboard класс для ThemesViewController
+ */
 
-//extension ConversationsListViewController {
-//    @IBAction func presentThems(){
-//        let themesVC = ThemesViewController()
-//        themesVC.delegate = self
-//        present (themesVC,animated: true)
-//
-//    }
-//
-//}
 
 extension ConversationsListViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let themesVC = segue.destination as? ThemesViewController  {
-            themesVC.delegate = self
+            
+            //Закоментить при обж-с сборке
+            themesVC.themesClosure = { color in
+                            self.logThemeChanging(selectedTheme: color)
+                        }
+ 
+           //Разкоментировать при Обж-С сборке
+            //themesVC.delegate = self
         }
     }
 }
 
-extension ConversationsListViewController : ThemesViewControllerDelegate {
-    func themesViewController(_ controller: ThemesViewController,
-                              didSelectTheme selectedTheme: UIColor) {
-        
-        logThemeChanging(selectedTheme: selectedTheme)
-    }
-    
-    func logThemeChanging(selectedTheme: UIColor){
-        print("Selcted theme \(selectedTheme)")
+extension ConversationsListViewController {
+    func logThemeChanging(selectedTheme: UIColor) {
+        print("Selected Theme \(selectedTheme)")
     }
 }
+
+ //Разкоментировать при Обж-С сборке
+//extension ConversationsListViewController: ThemesViewControllerDelegate {
+//    func themesViewController(_ controller: ThemesViewController, didSelectTheme selectedTheme: UIColor) {
+//        logThemeChanging(selectedTheme: selectedTheme)
+//    }
+//}

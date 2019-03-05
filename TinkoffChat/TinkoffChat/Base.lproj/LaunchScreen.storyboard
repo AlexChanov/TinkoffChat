@@ -26,7 +26,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тинькофф" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yX0-99-buy">
-                                <rect key="frame" x="16" y="147" width="343" height="61"/>
+                                <rect key="frame" x="16" y="151.5" width="343" height="61"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="51"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,8 +35,8 @@
                         <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bsf-dA-Fgm" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="0Fk-fC-kSa"/>
+                            <constraint firstItem="bsf-dA-Fgm" firstAttribute="firstBaseline" secondItem="yX0-99-buy" secondAttribute="baseline" constant="32.5" symbolType="layoutAnchor" id="HVo-eB-ONm"/>
                             <constraint firstItem="bsf-dA-Fgm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ors-qH-Dsx"/>
-                            <constraint firstItem="yX0-99-buy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="127" id="ZN7-Lz-eFj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yX0-99-buy" secondAttribute="trailing" constant="16" id="f70-jJ-pZe"/>
                             <constraint firstItem="yX0-99-buy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yqk-Hy-cJJ"/>
                         </constraints>
