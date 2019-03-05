@@ -81,25 +81,36 @@ extension ConversationsListViewController {
         if let themesVC = segue.destination as? ThemesViewController  {
             
             //Закоментить при обж-с сборке
-            themesVC.themesClosure = { color in
-                            self.logThemeChanging(selectedTheme: color)
-                        }
+//            themesVC.themesClosure = { color in
+//                            self.logThemeChanging(selectedTheme: color)
+//                        }
  
            //Разкоментировать при Обж-С сборке
-            //themesVC.delegate = self
+            themesVC.delegate = self
         }
     }
 }
 
 extension ConversationsListViewController {
     func logThemeChanging(selectedTheme: UIColor) {
-        print("Selected Theme \(selectedTheme)")
+        let currentColor = selectedTheme
+        if currentColor == UIColor.white
+        {
+            print("Selected light theme")
+        }
+        else if currentColor == UIColor.darkGray
+        {
+            print("Selected dark theme")
+        }
+        else {
+            print("Selected shampan theme")
+        }
     }
 }
 
  //Разкоментировать при Обж-С сборке
-//extension ConversationsListViewController: ThemesViewControllerDelegate {
-//    func themesViewController(_ controller: ThemesViewController, didSelectTheme selectedTheme: UIColor) {
-//        logThemeChanging(selectedTheme: selectedTheme)
-//    }
-//}
+extension ConversationsListViewController: ThemesViewControllerDelegate {
+    func themesViewController(_ controller: ThemesViewController, didSelectTheme selectedTheme: UIColor) {
+        logThemeChanging(selectedTheme: selectedTheme)
+    }
+}
