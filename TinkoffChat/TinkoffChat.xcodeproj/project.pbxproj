@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C1895722231A84400CB83B0 /* DisplayProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1895712231A84400CB83B0 /* DisplayProfileViewController.swift */; };
 		1CA3105B2222DD0800A9B154 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA3105A2222DD0800A9B154 /* ConversationCell.swift */; };
 		1CA3105D2222E13C00A9B154 /* ConversationCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA3105C2222E13C00A9B154 /* ConversationCellProtocol.swift */; };
 		1CA3105F2222E20800A9B154 /* ConversationCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA3105E2222E20800A9B154 /* ConversationCellModel.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C1895712231A84400CB83B0 /* DisplayProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayProfileViewController.swift; sourceTree = "<group>"; };
 		1C2B4445222A736400555636 /* TinkoffChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TinkoffChat-Bridging-Header.h"; sourceTree = "<group>"; };
 		1C2B4446222A736400555636 /* ThemesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThemesViewController.h; sourceTree = "<group>"; };
 		1C2B4447222A736400555636 /* ThemesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThemesViewController.m; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				1CB9140A220CC1C3002F1618 /* ProfileViewController.swift */,
+				1C1895712231A84400CB83B0 /* DisplayProfileViewController.swift */,
 			);
 			name = "Profile Screen";
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C1895722231A84400CB83B0 /* DisplayProfileViewController.swift in Sources */,
 				1CA3105D2222E13C00A9B154 /* ConversationCellProtocol.swift in Sources */,
 				1CC0541E222059ED007FEF40 /* ListTableViewCell.swift in Sources */,
 				1CA3105F2222E20800A9B154 /* ConversationCellModel.swift in Sources */,
