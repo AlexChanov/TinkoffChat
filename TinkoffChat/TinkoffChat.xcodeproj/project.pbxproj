@@ -14,6 +14,7 @@
 		1CA618C1222F35F9005B54E2 /* ThemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD56079222F0ABB00609E1C /* ThemesViewController.swift */; };
 		1CAAA327222198CA009E8A30 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAA326222198CA009E8A30 /* Extension.swift */; };
 		1CAAA3292221992D009E8A30 /* MainAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAA3282221992D009E8A30 /* MainAppModel.swift */; };
+		1CAE3D16223418ED00D8887F /* ProfileDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAE3D15223418ED00D8887F /* ProfileDataModel.swift */; };
 		1CB3B22A222AD55400F007C8 /* Themes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB3B229222AD55400F007C8 /* Themes.m */; };
 		1CB7DC7F2222B55D00A5F240 /* ConversationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB7DC7E2222B55D00A5F240 /* ConversationModel.swift */; };
 		1CB91409220CC1C3002F1618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB91408220CC1C3002F1618 /* AppDelegate.swift */; };
@@ -42,6 +43,7 @@
 		1CA3105E2222E20800A9B154 /* ConversationCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCellModel.swift; sourceTree = "<group>"; };
 		1CAAA326222198CA009E8A30 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		1CAAA3282221992D009E8A30 /* MainAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppModel.swift; sourceTree = "<group>"; };
+		1CAE3D15223418ED00D8887F /* ProfileDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataModel.swift; sourceTree = "<group>"; };
 		1CB3B227222AD0D000F007C8 /* ThemesViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThemesViewControllerDelegate.h; sourceTree = "<group>"; };
 		1CB3B228222AD55400F007C8 /* Themes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Themes.h; sourceTree = "<group>"; };
 		1CB3B229222AD55400F007C8 /* Themes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Themes.m; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				1CB9140A220CC1C3002F1618 /* ProfileViewController.swift */,
+				1CAE3D15223418ED00D8887F /* ProfileDataModel.swift */,
 				1C1895712231A84400CB83B0 /* DisplayProfileViewController.swift */,
 			);
 			name = "Profile Screen";
@@ -259,6 +262,7 @@
 				1CD56085222F229400609E1C /* UserDefaults+Color.swift in Sources */,
 				1CC054192220541D007FEF40 /* ConversationViewController.swift in Sources */,
 				1CB3B22A222AD55400F007C8 /* Themes.m in Sources */,
+				1CAE3D16223418ED00D8887F /* ProfileDataModel.swift in Sources */,
 				1CC58A65222130AF008C89D4 /* ListTableViewCellProtocol.swift in Sources */,
 				1CAAA327222198CA009E8A30 /* Extension.swift in Sources */,
 				1CE34D9A2210143700CB3ED4 /* Debug.swift in Sources */,

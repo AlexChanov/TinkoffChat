@@ -18,12 +18,34 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var goBackOutletButton: UIButton!
     @IBOutlet weak var avatartImage: UIImageView!
     @IBOutlet weak var instalAvatarImage: UIButton!
+    @IBOutlet var nameTextField: UITextField!
+    @IBOutlet var descriptionTextField: UITextField!
+    
+    @IBAction func GCDSaveButton(_ sender: Any) {
+        saveInformationFromProfileTextField()
+    }
+    
+    @IBAction func operationSaveButton(_ sender: Any) {
+    saveInformationFromProfileTextField()
+    }
     
     @IBAction func instalAvatarButton(_ sender: Any) {
         print("Выбери изображение профиля")
         showCameraAlertController()
     }
    
+    var dataProfile = ""
+    
+    
+    //MARK - save information
+    
+    func saveInformationFromProfileTextField(){
+    
+        let imageAvatar = UIImage(contentsOfFile: "placeholder-user")
+        
+        ProfileModel.data = [ProfileDataModel(name:nameTextField.text ?? "", description: descriptionTextField.text ?? "",avatar: avatartImage.image ?? imageAvatar!)]
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,10 +64,7 @@ class ProfileViewController: UIViewController {
         avatartImage.clipsToBounds = true
         instalAvatarImage.imageEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         instalAvatarImage.layer.cornerRadius = avatartImage.layer.cornerRadius
-//        editDescriptionButton.layer.cornerRadius = editDescriptionButton.frame.size.height*0.2
-//        editDescriptionButton.layer.borderWidth = 1.0
-//        editDescriptionButton.layer.borderColor = UIColor.black.cgColor
-//        editDescriptionButton.backgroundColor = .white
+
         goBackOutletButton.layer.cornerRadius = goBackOutletButton.frame.size.height/2.0
     }
     
