@@ -385,24 +385,12 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1Y-t4-ccg">
                                         <rect key="frame" x="0.0" y="0.0" width="166.5" height="30"/>
                                         <color key="backgroundColor" red="1" green="1" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="GCD">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="GCDSaveButton:" destination="OXz-t3-ePO" eventType="touchUpInside" id="I4k-dQ-GEb"/>
-                                        </connections>
+                                        <state key="normal" title="GCD"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMk-10-2eL">
                                         <rect key="frame" x="176.5" y="0.0" width="166.5" height="30"/>
                                         <color key="backgroundColor" red="1" green="1" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Operation">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="operationSaveButton:" destination="OXz-t3-ePO" eventType="touchUpInside" id="nNY-hS-55B"/>
-                                        </connections>
+                                        <state key="normal" title="Operation"/>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -438,10 +426,8 @@
                     </view>
                     <connections>
                         <outlet property="avatartImage" destination="uig-Cq-N1Q" id="01h-5d-zFw"/>
-                        <outlet property="descriptionTextField" destination="xcV-ah-ERa" id="umt-mW-WEn"/>
                         <outlet property="goBackOutletButton" destination="oUr-9Z-3yF" id="7Ub-Gu-yhY"/>
                         <outlet property="instalAvatarImage" destination="8rW-H4-GaG" id="uSM-d8-2kG"/>
-                        <outlet property="nameTextField" destination="f73-b6-UVi" id="W3h-O6-aCc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Om-kn-six" sceneMemberID="firstResponder"/>

@@ -16,10 +16,7 @@ class DisplayProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-                editDescriptionButton.layer.cornerRadius = editDescriptionButton.frame.size.height*0.2
-                editDescriptionButton.layer.borderWidth = 1.0
-                editDescriptionButton.layer.borderColor = UIColor.black.cgColor
-                editDescriptionButton.backgroundColor = .white
+        // Do any additional setup after loading the view.
     }
     
 
