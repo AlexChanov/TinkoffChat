@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         //Закоментить при обж-с сборке
-        AppDelegate.restoreApppearance()
+//        AppDelegate.restoreApppearance()
         
         return true
     }
@@ -95,24 +95,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 //Закоментить при обж-с сборке
-extension AppDelegate {
-    struct Constants {
-        static let themeColorKey = "ThemeColorKey"
-    }
-
-    class func changeAppearance(_ color: UIColor) {
-        let navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.barTintColor = color
-        saveApppearance(color)
-    }
-
-    class func saveApppearance(_ color: UIColor) {
-        UserDefaults.standard.setColor(color: color, forKey: AppDelegate.Constants.themeColorKey)
-    }
-
-    class func restoreApppearance() {
-        guard let color = UserDefaults.standard.colorForKey(key: AppDelegate.Constants.themeColorKey)
-            else { return }
-        changeAppearance(color)
-    }
-}
+//extension AppDelegate {
+//    struct Constants {
+//        static let themeColorKey = "ThemeColorKey"
+//    }
+//
+//    class func changeAppearance(_ color: UIColor) {
+//        let navigationBarAppearace = UINavigationBar.appearance()
+//        navigationBarAppearace.barTintColor = color
+//        saveApppearance(color)
+//    }
+//
+//    class func saveApppearance(_ color: UIColor) {
+//        UserDefaults.standard.setColor(color: color, forKey: AppDelegate.Constants.themeColorKey)
+//    }
+//
+//    class func restoreApppearance() {
+//        guard let color = UserDefaults.standard.colorForKey(key: AppDelegate.Constants.themeColorKey)
+//            else { return }
+//        changeAppearance(color)
+//    }
+//}

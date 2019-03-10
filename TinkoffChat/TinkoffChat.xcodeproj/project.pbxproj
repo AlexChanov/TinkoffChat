@@ -11,7 +11,7 @@
 		1CA3105B2222DD0800A9B154 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA3105A2222DD0800A9B154 /* ConversationCell.swift */; };
 		1CA3105D2222E13C00A9B154 /* ConversationCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA3105C2222E13C00A9B154 /* ConversationCellProtocol.swift */; };
 		1CA3105F2222E20800A9B154 /* ConversationCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA3105E2222E20800A9B154 /* ConversationCellModel.swift */; };
-		1CA618C1222F35F9005B54E2 /* ThemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD56079222F0ABB00609E1C /* ThemesViewController.swift */; };
+		1CA618C0222F2B58005B54E2 /* ThemesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B4447222A736400555636 /* ThemesViewController.m */; };
 		1CAAA327222198CA009E8A30 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAA326222198CA009E8A30 /* Extension.swift */; };
 		1CAAA3292221992D009E8A30 /* MainAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAA3282221992D009E8A30 /* MainAppModel.swift */; };
 		1CAE3D16223418ED00D8887F /* ProfileDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAE3D15223418ED00D8887F /* ProfileDataModel.swift */; };
@@ -269,7 +269,7 @@
 				1CAAA3292221992D009E8A30 /* MainAppModel.swift in Sources */,
 				1CA3105B2222DD0800A9B154 /* ConversationCell.swift in Sources */,
 				1CB91409220CC1C3002F1618 /* AppDelegate.swift in Sources */,
-				1CA618C1222F35F9005B54E2 /* ThemesViewController.swift in Sources */,
+				1CA618C0222F2B58005B54E2 /* ThemesViewController.m in Sources */,
 				1CB91411220CC1C3002F1618 /* TinkoffChat.xcdatamodeld in Sources */,
 				1CB7DC7F2222B55D00A5F240 /* ConversationModel.swift in Sources */,
 				1CC0541B22205488007FEF40 /* ConversationsListViewController.swift in Sources */,
