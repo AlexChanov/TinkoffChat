@@ -23,17 +23,33 @@ class ProfileViewController: UIViewController {
         print("Выбери изображение профиля")
         showCameraAlertController()
     }
-   
+    @IBOutlet weak var editDescriptionButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         settingUIItems()
+        print(editDescriptionButton.frame)
     }
-
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        print(editDescriptionButton?.frame ?? "no edit button frame yet")
+        /*
+         В методе init ещё не существует UI элементов, поэтому нет и фреймов
+         */
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-          }
+        /*
+         Размеры фреймов в методах viewDidLoad и viewDidAppear отличаются потому что, верстка в сториборде
+         происходит на экране который меньше чем экран который мы запускаем в симуляторе.
+         По заданию в сториборде у нас IPhone SE, а тестируем на IPhone X. В методе viewDidAppear мы
+         уже имеем перерисованные по модели симулятора UI элементы
+         */
+        print(editDescriptionButton.frame)
+    }
     
     //MARK : - Настройка эллементов UI
     func settingUIItems()
@@ -42,10 +58,10 @@ class ProfileViewController: UIViewController {
         avatartImage.clipsToBounds = true
         instalAvatarImage.imageEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         instalAvatarImage.layer.cornerRadius = avatartImage.layer.cornerRadius
-//        editDescriptionButton.layer.cornerRadius = editDescriptionButton.frame.size.height*0.2
-//        editDescriptionButton.layer.borderWidth = 1.0
-//        editDescriptionButton.layer.borderColor = UIColor.black.cgColor
-//        editDescriptionButton.backgroundColor = .white
+        editDescriptionButton.layer.cornerRadius = editDescriptionButton.frame.size.height*0.2
+        editDescriptionButton.layer.borderWidth = 1.0
+        editDescriptionButton.layer.borderColor = UIColor.black.cgColor
+        editDescriptionButton.backgroundColor = .white
         goBackOutletButton.layer.cornerRadius = goBackOutletButton.frame.size.height/2.0
     }
     
