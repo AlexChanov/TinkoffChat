@@ -19,11 +19,21 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var avatartImage: UIImageView!
     @IBOutlet weak var instalAvatarImage: UIButton!
     
+    @IBOutlet var aboutProfileTextView: UITextView!
+    @IBOutlet var profileNameTextField: UITextField!
     @IBAction func instalAvatarButton(_ sender: Any) {
         print("Выбери изображение профиля")
         showCameraAlertController()
     }
     @IBOutlet weak var editDescriptionButton: UIButton!
+    @IBOutlet var operationButton: UIButton!
+    @IBOutlet var gcdButton: UIButton!
+    @IBAction func editActionStart(_ sender: UIButton) {
+        buttonSaveEnable()
+        fieldProfileEnable()
+    }
+    
+    
     
     
     override func viewDidLoad() {
@@ -40,6 +50,12 @@ class ProfileViewController: UIViewController {
          */
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        btnEditUnHidden()
+        fieldProfileDisable()
+        //fieldProfileDisable()
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         /*
@@ -54,6 +70,13 @@ class ProfileViewController: UIViewController {
     //MARK : - Настройка эллементов UI
     func settingUIItems()
     {
+        //gcdButton.layer.cornerRadius = cornerRadius.editBtn.rawValue
+//        gcdButton.tintColor = UIImage
+        gcdButton.layer.borderWidth = 1
+        operationButton.layer.borderWidth = 1
+        //gcdButton.layer.borderColor = ThemeManager.currentTheme().titleTextColor.cgColor//UIColor.black.cgColor
+//        gcdButton.backgroundColor = ThemeManager.currentTheme().backgroundColor
+        
         avatartImage.layer.cornerRadius = instalAvatarImage.frame.size.height/2.0
         avatartImage.clipsToBounds = true
         instalAvatarImage.imageEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
@@ -61,10 +84,39 @@ class ProfileViewController: UIViewController {
         editDescriptionButton.layer.cornerRadius = editDescriptionButton.frame.size.height*0.2
         editDescriptionButton.layer.borderWidth = 1.0
         editDescriptionButton.layer.borderColor = UIColor.black.cgColor
-        editDescriptionButton.backgroundColor = .white
         goBackOutletButton.layer.cornerRadius = goBackOutletButton.frame.size.height/2.0
     }
     
+    
+    // Включение кнопок
+    fileprivate func buttonSaveEnable() {
+        self.gcdButton.isEnabled = true
+        self.operationButton.isEnabled = true
+        gcdButton.isHidden = false
+        operationButton.isHidden = false
+        editDescriptionButton.isHidden = true
+    }
+    
+    fileprivate func btnEditUnHidden() {
+        editDescriptionButton.isHidden = false
+        gcdButton.isHidden = true
+        operationButton.isHidden = true
+    }
+    
+    // две функции по блокировке и разблокировке полей для редактирования
+    fileprivate func fieldProfileDisable() {
+        DispatchQueue.main.async {
+            self.profileNameTextField.isEnabled = false
+            self.aboutProfileTextView.isEditable = false
+            self.instalAvatarImage.isEnabled = false
+        }
+    }
+    
+    fileprivate func fieldProfileEnable() {
+        self.profileNameTextField.isEnabled = true
+        self.aboutProfileTextView.isEditable = true
+        self.instalAvatarImage.isEnabled = true
+    }
 }
 
 //MARK : - Камера и галерея
