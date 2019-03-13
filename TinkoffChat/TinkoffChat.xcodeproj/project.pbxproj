@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C51D8C222369AE700D1DD78 /* ThemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD56079222F0ABB00609E1C /* ThemesViewController.swift */; };
+		1C51D8C52236A33F00D1DD78 /* ReadWriteDataToDisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51D8C42236A33F00D1DD78 /* ReadWriteDataToDisk.swift */; };
 		1CA3105B2222DD0800A9B154 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA3105A2222DD0800A9B154 /* ConversationCell.swift */; };
 		1CA3105D2222E13C00A9B154 /* ConversationCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA3105C2222E13C00A9B154 /* ConversationCellProtocol.swift */; };
 		1CA3105F2222E20800A9B154 /* ConversationCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA3105E2222E20800A9B154 /* ConversationCellModel.swift */; };
-		1CA618C0222F2B58005B54E2 /* ThemesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B4447222A736400555636 /* ThemesViewController.m */; };
 		1CAAA327222198CA009E8A30 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAA326222198CA009E8A30 /* Extension.swift */; };
 		1CAAA3292221992D009E8A30 /* MainAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAA3282221992D009E8A30 /* MainAppModel.swift */; };
+		1CB23DFD2236F21D003A79B6 /* AdditionalObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB23DFC2236F21D003A79B6 /* AdditionalObject.swift */; };
 		1CB3B22A222AD55400F007C8 /* Themes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB3B229222AD55400F007C8 /* Themes.m */; };
 		1CB7DC7F2222B55D00A5F240 /* ConversationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB7DC7E2222B55D00A5F240 /* ConversationModel.swift */; };
 		1CB91409220CC1C3002F1618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB91408220CC1C3002F1618 /* AppDelegate.swift */; };
@@ -35,11 +37,13 @@
 		1C2B4445222A736400555636 /* TinkoffChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TinkoffChat-Bridging-Header.h"; sourceTree = "<group>"; };
 		1C2B4446222A736400555636 /* ThemesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThemesViewController.h; sourceTree = "<group>"; };
 		1C2B4447222A736400555636 /* ThemesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThemesViewController.m; sourceTree = "<group>"; };
+		1C51D8C42236A33F00D1DD78 /* ReadWriteDataToDisk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWriteDataToDisk.swift; sourceTree = "<group>"; };
 		1CA3105A2222DD0800A9B154 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		1CA3105C2222E13C00A9B154 /* ConversationCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCellProtocol.swift; sourceTree = "<group>"; };
 		1CA3105E2222E20800A9B154 /* ConversationCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCellModel.swift; sourceTree = "<group>"; };
 		1CAAA326222198CA009E8A30 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		1CAAA3282221992D009E8A30 /* MainAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppModel.swift; sourceTree = "<group>"; };
+		1CB23DFC2236F21D003A79B6 /* AdditionalObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalObject.swift; sourceTree = "<group>"; };
 		1CB3B227222AD0D000F007C8 /* ThemesViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThemesViewControllerDelegate.h; sourceTree = "<group>"; };
 		1CB3B228222AD55400F007C8 /* Themes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Themes.h; sourceTree = "<group>"; };
 		1CB3B229222AD55400F007C8 /* Themes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Themes.m; sourceTree = "<group>"; };
@@ -78,8 +82,23 @@
 			isa = PBXGroup;
 			children = (
 				1CB9140A220CC1C3002F1618 /* ProfileViewController.swift */,
+				1C51D8C42236A33F00D1DD78 /* ReadWriteDataToDisk.swift */,
+				1CB23DFC2236F21D003A79B6 /* AdditionalObject.swift */,
 			);
 			name = "Profile Screen";
+			sourceTree = "<group>";
+		};
+		1C51D8C32236A2EC00D1DD78 /*  ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				1CB3B229222AD55400F007C8 /* Themes.m */,
+				1CB3B228222AD55400F007C8 /* Themes.h */,
+				1C2B4445222A736400555636 /* TinkoffChat-Bridging-Header.h */,
+				1C2B4447222A736400555636 /* ThemesViewController.m */,
+				1C2B4446222A736400555636 /* ThemesViewController.h */,
+				1CB3B227222AD0D000F007C8 /* ThemesViewControllerDelegate.h */,
+			);
+			name = " ObjC";
 			sourceTree = "<group>";
 		};
 		1CA310602222E21D00A9B154 /* CellConversation */ = {
@@ -132,12 +151,7 @@
 				1CC0542022205A49007FEF40 /* CellMainTableView */,
 				1CC58A6922213361008C89D4 /* Chat Screen */,
 				1C22CB872222C73200B8A3B0 /* Profile Screen */,
-				1C2B4446222A736400555636 /* ThemesViewController.h */,
-				1C2B4447222A736400555636 /* ThemesViewController.m */,
-				1CB3B227222AD0D000F007C8 /* ThemesViewControllerDelegate.h */,
-				1C2B4445222A736400555636 /* TinkoffChat-Bridging-Header.h */,
-				1CD56079222F0ABB00609E1C /* ThemesViewController.swift */,
-				1CD5607B222F0F4500609E1C /* UserDefaults+Color.swift */,
+				1C51D8C32236A2EC00D1DD78 /*  ObjC */,
 			);
 			path = TinkoffChat;
 			sourceTree = "<group>";
@@ -157,8 +171,8 @@
 				1CAAA3282221992D009E8A30 /* MainAppModel.swift */,
 				1CC58A64222130AF008C89D4 /* ListTableViewCellProtocol.swift */,
 				1CC58A6722213189008C89D4 /* ListTableViewCellDataModel.swift */,
-				1CB3B228222AD55400F007C8 /* Themes.h */,
-				1CB3B229222AD55400F007C8 /* Themes.m */,
+				1CD56079222F0ABB00609E1C /* ThemesViewController.swift */,
+				1CD5607B222F0F4500609E1C /* UserDefaults+Color.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -251,6 +265,8 @@
 				1CC0541E222059ED007FEF40 /* ListTableViewCell.swift in Sources */,
 				1CA3105F2222E20800A9B154 /* ConversationCellModel.swift in Sources */,
 				1CC58A6822213189008C89D4 /* ListTableViewCellDataModel.swift in Sources */,
+				1CB23DFD2236F21D003A79B6 /* AdditionalObject.swift in Sources */,
+				1C51D8C222369AE700D1DD78 /* ThemesViewController.swift in Sources */,
 				1CB9140B220CC1C3002F1618 /* ProfileViewController.swift in Sources */,
 				1CD56085222F229400609E1C /* UserDefaults+Color.swift in Sources */,
 				1CC054192220541D007FEF40 /* ConversationViewController.swift in Sources */,
@@ -261,10 +277,10 @@
 				1CAAA3292221992D009E8A30 /* MainAppModel.swift in Sources */,
 				1CA3105B2222DD0800A9B154 /* ConversationCell.swift in Sources */,
 				1CB91409220CC1C3002F1618 /* AppDelegate.swift in Sources */,
-				1CA618C0222F2B58005B54E2 /* ThemesViewController.m in Sources */,
 				1CB91411220CC1C3002F1618 /* TinkoffChat.xcdatamodeld in Sources */,
 				1CB7DC7F2222B55D00A5F240 /* ConversationModel.swift in Sources */,
 				1CC0541B22205488007FEF40 /* ConversationsListViewController.swift in Sources */,
+				1C51D8C52236A33F00D1DD78 /* ReadWriteDataToDisk.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

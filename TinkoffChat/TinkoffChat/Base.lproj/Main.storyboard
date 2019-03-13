@@ -35,7 +35,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="editActionStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g4R-mZ-epr"/>
+                                    <action selector="editData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="34F-pM-8hS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8C-p7-WCH">
@@ -45,6 +45,9 @@
                                 <state key="normal" title="GCD">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9SX-tj-XXr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" semanticContentAttribute="playback" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JW-YN-ltr">
                                 <rect key="frame" x="279" y="323" width="80" height="80"/>
@@ -78,6 +81,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <connections>
+                                    <action selector="editActionStart:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="klR-gl-Dng"/>
+                                </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MN4-Y1-vwg">
                                 <rect key="frame" x="16" y="451" width="343" height="144"/>
@@ -85,8 +91,14 @@
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="kTB-ss-kug"/>
+                                    <outlet property="pasteDelegate" destination="BYZ-38-t0r" id="oxj-ai-nqW"/>
+                                    <outlet property="textDragDelegate" destination="BYZ-38-t0r" id="bk2-OA-8jO"/>
+                                    <outlet property="textDropDelegate" destination="BYZ-38-t0r" id="THm-gU-IpD"/>
+                                </connections>
                             </textView>
-                            <activityIndicatorView hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8Ye-UZ-Em4">
+                            <activityIndicatorView hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8Ye-UZ-Em4">
                                 <rect key="frame" x="167.5" y="313.5" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5ZW-By-Joh"/>
@@ -101,6 +113,9 @@
                                 <state key="normal" title="Operation">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gCV-Ps-dHa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -123,6 +138,7 @@
                             <constraint firstItem="p0u-AV-w1u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="U6o-24-Kyo"/>
                             <constraint firstItem="ETc-H2-PaB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Us1-5K-qG3"/>
                             <constraint firstItem="Q8C-p7-WCH" firstAttribute="height" secondItem="c8K-LC-oCp" secondAttribute="height" id="V8I-jd-Lih"/>
+                            <constraint firstItem="nXL-uo-dzy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Q8C-p7-WCH" secondAttribute="trailing" id="bnh-Ms-EZ1"/>
                             <constraint firstItem="8Ye-UZ-Em4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="e6w-qt-z1J"/>
                             <constraint firstItem="MN4-Y1-vwg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fN6-V9-Jzx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nXL-uo-dzy" secondAttribute="trailing" constant="16" id="gk1-CF-kzr"/>
@@ -138,6 +154,7 @@
                     </view>
                     <connections>
                         <outlet property="aboutProfileTextView" destination="MN4-Y1-vwg" id="aAq-3y-q2K"/>
+                        <outlet property="activityIndicator" destination="8Ye-UZ-Em4" id="gQV-73-76q"/>
                         <outlet property="avatartImage" destination="p0u-AV-w1u" id="pnb-iB-Xx5"/>
                         <outlet property="editDescriptionButton" destination="c8K-LC-oCp" id="QA0-5L-xfm"/>
                         <outlet property="gcdButton" destination="Q8C-p7-WCH" id="xwd-rS-DFd"/>
@@ -154,7 +171,7 @@
         <!--Themes View Controller-->
         <scene sceneID="x4a-sK-GFE">
             <objects>
-                <viewController id="tHZ-EO-v3Q" customClass="ThemesViewController" sceneMemberID="viewController">
+                <viewController id="tHZ-EO-v3Q" customClass="ThemesViewController" customModule="TinkoffChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="24i-Wr-3L8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -253,7 +270,6 @@
                         <barButtonItem key="leftBarButtonItem" title="Темы" style="done" id="m6g-8z-Zew">
                             <color key="tintColor" red="1" green="1" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="presentThems" destination="9KO-Dm-2Fv" id="TBk-JK-mJq"/>
                                 <segue destination="tHZ-EO-v3Q" kind="presentation" id="cra-gk-cLo"/>
                             </connections>
                         </barButtonItem>
