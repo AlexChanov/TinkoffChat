@@ -52,7 +52,7 @@ struct SaveData: SaveDataProtocol {
     var textAlert: String?
     
     mutating func textAlertFunc() -> String {
-        return self.saveData == true ?  "данные сохранены" : "данные не удалось записать"
+        return self.saveData == true ?  "Данные сохранены" : "Данные не удалось записать"
     }
 }
 

@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8C-p7-WCH">
-                                <rect key="frame" x="16" y="603" width="171.5" height="44"/>
+                                <rect key="frame" x="16" y="603" width="166.5" height="44"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                 <state key="normal" title="GCD">
@@ -56,7 +56,9 @@
                                     <constraint firstAttribute="width" constant="80" id="cqu-MH-lgo"/>
                                     <constraint firstAttribute="height" constant="80" id="meq-GR-HXG"/>
                                 </constraints>
-                                <state key="normal" image="slr-camera-2-xxl"/>
+                                <state key="normal" image="slr-camera-2-xxl">
+                                    <color key="titleColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="instalAvatarButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wq2-mf-tsn"/>
                                 </connections>
@@ -107,7 +109,7 @@
                                 <color key="color" red="1" green="1" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXL-uo-dzy">
-                                <rect key="frame" x="187.5" y="603" width="171.5" height="44"/>
+                                <rect key="frame" x="192.5" y="603" width="166.5" height="44"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                 <state key="normal" title="Operation">
@@ -135,20 +137,22 @@
                             <constraint firstItem="8Ye-UZ-Em4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QBp-jJ-lbf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MN4-Y1-vwg" secondAttribute="trailing" constant="16" id="QJZ-am-Id1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Q8C-p7-WCH" secondAttribute="trailing" symbolic="YES" id="RJV-Xb-xbW"/>
+                            <constraint firstItem="Q8C-p7-WCH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="T6r-ok-2Kf"/>
                             <constraint firstItem="p0u-AV-w1u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="U6o-24-Kyo"/>
                             <constraint firstItem="ETc-H2-PaB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Us1-5K-qG3"/>
                             <constraint firstItem="Q8C-p7-WCH" firstAttribute="height" secondItem="c8K-LC-oCp" secondAttribute="height" id="V8I-jd-Lih"/>
-                            <constraint firstItem="nXL-uo-dzy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Q8C-p7-WCH" secondAttribute="trailing" id="bnh-Ms-EZ1"/>
+                            <constraint firstItem="nXL-uo-dzy" firstAttribute="leading" secondItem="Q8C-p7-WCH" secondAttribute="trailing" constant="10" id="bnh-Ms-EZ1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nXL-uo-dzy" secondAttribute="trailing" constant="16" id="bud-9f-ukh"/>
                             <constraint firstItem="8Ye-UZ-Em4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="e6w-qt-z1J"/>
                             <constraint firstItem="MN4-Y1-vwg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fN6-V9-Jzx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nXL-uo-dzy" secondAttribute="trailing" constant="16" id="gk1-CF-kzr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="c8K-LC-oCp" secondAttribute="bottom" constant="20" id="gqA-nz-ko4"/>
-                            <constraint firstItem="Q8C-p7-WCH" firstAttribute="width" secondItem="c8K-LC-oCp" secondAttribute="width" multiplier="0.5" id="ils-6S-yID"/>
+                            <constraint firstItem="nXL-uo-dzy" firstAttribute="height" secondItem="Q8C-p7-WCH" secondAttribute="height" id="gr2-5y-1yu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5JW-YN-ltr" secondAttribute="trailing" constant="16" id="pFl-8l-yad"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nXL-uo-dzy" secondAttribute="bottom" constant="20" id="sb5-Yk-1gd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oGD-dq-2nb" secondAttribute="trailing" constant="16" id="srg-Q2-JZA"/>
                             <constraint firstItem="Q8C-p7-WCH" firstAttribute="leading" secondItem="c8K-LC-oCp" secondAttribute="leading" id="xEs-aH-kyw"/>
-                            <constraint firstItem="nXL-uo-dzy" firstAttribute="height" secondItem="Q8C-p7-WCH" secondAttribute="height" id="yAZ-Ro-gUL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Q8C-p7-WCH" secondAttribute="bottom" constant="20" id="xfC-pG-BNi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -178,46 +182,58 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UP8-de-2bL">
                                 <rect key="frame" x="137.5" y="224" width="100" height="33"/>
-                                <color key="backgroundColor" red="1" green="0.98431372549019602" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="Djc-7n-X6Z"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Xja-DB-omb"/>
                                 </constraints>
-                                <state key="normal" title="Тема 1"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Тема 1">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="theme1Tap:" destination="tHZ-EO-v3Q" eventType="touchUpInside" id="IIS-H1-qR9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPF-jQ-EDS">
                                 <rect key="frame" x="137.5" y="317" width="100" height="33"/>
-                                <color key="backgroundColor" red="1" green="0.98431372549999996" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="BGZ-zv-Q8d"/>
                                 </constraints>
-                                <state key="normal" title="Тема 2"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Тема 2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="theme2Tap:" destination="tHZ-EO-v3Q" eventType="touchUpInside" id="f0H-td-pj8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzV-RW-ta4">
                                 <rect key="frame" x="137.5" y="410" width="100" height="33"/>
-                                <color key="backgroundColor" red="1" green="0.98431372549999996" blue="0.77086900680000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="PNL-HI-2Fx"/>
                                 </constraints>
-                                <state key="normal" title="Тема 3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Тема 3">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="theme3Tap:" destination="tHZ-EO-v3Q" eventType="touchUpInside" id="ZnY-cr-MEK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxI-mi-sgg">
-                                <rect key="frame" x="279" y="36" width="80" height="33"/>
-                                <color key="backgroundColor" red="1" green="0.98431372549999996" blue="0.77086900680000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="273" y="36" width="86" height="33"/>
+                                <color key="backgroundColor" red="1" green="0.98431372549999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="Na6-Zd-zwk"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                                <state key="normal" title="Закрыть"/>
+                                <state key="normal" title="Закрыть">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="closeTap:" destination="tHZ-EO-v3Q" eventType="touchUpInside" id="jbf-ye-QJm"/>
                                 </connections>
@@ -239,6 +255,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tFN-U0-tT0"/>
                     </view>
+                    <connections>
+                        <outlet property="clouseButtonOutlet" destination="oxI-mi-sgg" id="VzY-a5-YFE"/>
+                        <outlet property="theme1Outlet" destination="UP8-de-2bL" id="tTn-Cd-1NY"/>
+                        <outlet property="theme2Outlet" destination="vPF-jQ-EDS" id="OUx-Ev-gMf"/>
+                        <outlet property="theme3Outlet" destination="zzV-RW-ta4" id="wsE-mm-yYD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q3L-6u-eaP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -252,7 +274,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U59-jG-chl">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U59-jG-chl">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -266,9 +288,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dma-F8-fnd"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Tinkoff Chat" id="4V2-A4-LSf">
+                    <navigationItem key="navigationItem" title="Tinkoff Chat" id="4V2-A4-LSf" colorLabel="IBBuiltInLabel-Yellow">
                         <barButtonItem key="leftBarButtonItem" title="Темы" style="done" id="m6g-8z-Zew">
-                            <color key="tintColor" red="1" green="1" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="1" green="0.94466091293315912" blue="0.49815684906844704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="tHZ-EO-v3Q" kind="presentation" id="cra-gk-cLo"/>
                             </connections>
@@ -276,7 +298,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Профиль" image="profileIcon" style="done" id="yga-jb-PUz">
                             <inset key="imageInsets" minX="19" minY="0.0" maxX="-7" maxY="-3"/>
                             <inset key="landscapeImageInsets" minX="0.0" minY="0.0" maxX="-1" maxY="0.0"/>
-                            <color key="tintColor" red="1" green="1" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="1" green="0.92097331170261132" blue="0.43207944636102713" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="openProfile:" destination="9KO-Dm-2Fv" id="qRD-5Y-FnZ"/>
                                 <segue destination="BYZ-38-t0r" kind="presentation" identifier="profileSegue" id="Ca8-hk-Xv4"/>
