@@ -290,7 +290,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Tinkoff Chat" id="4V2-A4-LSf" colorLabel="IBBuiltInLabel-Yellow">
                         <barButtonItem key="leftBarButtonItem" title="Темы" style="done" id="m6g-8z-Zew">
-                            <color key="tintColor" red="1" green="0.94466091293315912" blue="0.49815684906844704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="1" green="0.98431372549999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="tHZ-EO-v3Q" kind="presentation" id="cra-gk-cLo"/>
                             </connections>
@@ -298,7 +298,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Профиль" image="profileIcon" style="done" id="yga-jb-PUz">
                             <inset key="imageInsets" minX="19" minY="0.0" maxX="-7" maxY="-3"/>
                             <inset key="landscapeImageInsets" minX="0.0" minY="0.0" maxX="-1" maxY="0.0"/>
-                            <color key="tintColor" red="1" green="0.92097331170261132" blue="0.43207944636102713" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="1" green="0.98431372549999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="openProfile:" destination="9KO-Dm-2Fv" id="qRD-5Y-FnZ"/>
                                 <segue destination="BYZ-38-t0r" kind="presentation" identifier="profileSegue" id="Ca8-hk-Xv4"/>

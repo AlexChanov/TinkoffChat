@@ -34,7 +34,7 @@ class ListTableViewCell: UITableViewCell {
         }
         
         if dataModel.online {
-            self.backgroundColor = UIColor(displayP3Red: 255.0/255.0, green: 254.0/255.0, blue: 189.0/255.0, alpha: 1.0)
+            self.backgroundColor = UIColor(displayP3Red: 251.0/255.0, green: 255.0/255.0, blue: 221.0/255.0, alpha: 1.0)
         } else {
             self.backgroundColor = UIColor.white
         }
