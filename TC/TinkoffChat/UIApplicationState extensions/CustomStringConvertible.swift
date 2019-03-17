@@ -3,7 +3,7 @@
 //  TinkoffChat
 //
 //  Created by Чанов] Алексей
-//  Copyright © 2019 Чанов] Алексей All rights reserved.
+//  Copyright © 2019 Чанов Алексей All rights reserved.
 //
 
 import Foundation
