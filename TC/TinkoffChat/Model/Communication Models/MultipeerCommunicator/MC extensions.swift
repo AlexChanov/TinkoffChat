@@ -30,6 +30,10 @@ extension MultipeerCommunicator: MCNearbyServiceBrowserDelegate, MCNearbyService
     
 
     func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
+        guard let info = info, let userName = info["userName"] else { return }
+        let session: MCSession = getSession(with: peerID)
+        browser.invitePeer(peerID, to: session, withContext: nil, timeout: 10)
+        delegate?.didFoundUser(userId: peerID.displayName, userName: userName)
     }
     
     func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
