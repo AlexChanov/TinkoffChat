@@ -43,8 +43,6 @@ extension MultipeerCommunicator: MCNearbyServiceBrowserDelegate, MCNearbyService
     
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didNotStartAdvertisingPeer error: Error) {
         delegate?.failedToStartAdvertising(error: error)
-        let session = getSession(with: peerID)
-        invitationHandler(true, session)
     }
     
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
@@ -54,11 +52,8 @@ extension MultipeerCommunicator: MCNearbyServiceBrowserDelegate, MCNearbyService
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         let jsonDecoder = JSONDecoder()
-      
-        guard let info = info, let userName = info["userName"] else { return }
-        let session: MCSession = getSession(with: peerID)
-        browser.invitePeer(peerID, to: session, withContext: nil, timeout: 10)
-        delegate?.didFoundUser(userId: peerID.displayName, userName: userName)
+        guard let info = try? jsonDecoder.decode([String:String].self, from: data), info["eventType"] == "TextMessage" else { return }
+        delegate?.didReceiveMessage(text: info["text"]!, fromUser: peerID.displayName, toUser: localPeerId.displayName)
     }
     
 }
