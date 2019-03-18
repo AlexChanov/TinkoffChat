@@ -81,7 +81,6 @@
 		39DAF66A217B0DF30043394F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		39DAF66C217B77D60043394F /* OperationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationDataManager.swift; sourceTree = "<group>"; };
 		39DDEB72215D36880028EC77 /* ImagePickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerDelegate.swift; sourceTree = "<group>"; };
-		39DDEB75215D431A0028EC77 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		39DDEB76215D431A0028EC77 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -396,7 +395,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				39CD89AF2153E29F00D7A2BA /* Base */,
-				39DDEB75215D431A0028EC77 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

@@ -69,14 +69,7 @@ class ConversationListViewController: UIViewController, CommunicationIntegrate {
         } else if segue.identifier == "ThemesSegue" {
             guard let themesNVC = segue.destination as? UINavigationController, let themesVC = themesNVC.viewControllers.first as? ThemesViewController else { return }
             themesVC.delegate = self
-            /*themesVC.colorHandler = { (selectedTheme: UIColor) -> Void in
-                UINavigationBar.appearance().barTintColor = selectedTheme
-                DispatchQueue.global(qos: .utility).async {
-                guard let colorData =  try? NSKeyedArchiver.archivedData(withRootObject: selectedTheme, requiringSecureCoding: false) else { return }
-                UserDefaults.standard.set(colorData, forKey: "Theme")
-                }
-                Logger.shared.logThemeChanged(selectedTheme: selectedTheme)
-            }*/
+      
         } else {
             super.prepare(for: segue, sender: sender)
         }

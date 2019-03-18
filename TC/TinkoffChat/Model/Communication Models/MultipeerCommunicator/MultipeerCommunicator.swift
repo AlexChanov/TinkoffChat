@@ -43,12 +43,7 @@ class MultipeerCommunicator: NSObject, Communicator {
         browser.startBrowsingForPeers()
     }
     
-    func sendMessage(string: String, to userId: String, completionHandler: MessageHandler?) {
-        guard let session = sessionsDictionary[userId] else { return }
-        let dictionaryToSend = ["eventType" : "TextMessage", "messageId" : generateMessageId(), "text" : string]
-        guard let data = try? JSONSerialization.data(withJSONObject: dictionaryToSend, options: .prettyPrinted) else { return }
-        do {
-            try session.send(data, toPeers: session.connectedPeers, with: .reliable)
+    
             delegate?.didReceiveMessage(text: string, fromUser: localPeerId.displayName, toUser: userId)
             if let completion = completionHandler {
                 completion(true, nil)
@@ -69,8 +64,6 @@ class MultipeerCommunicator: NSObject, Communicator {
     }
     
     
-    func generateMessageId() -> String {
-        let string = "\(arc4random_uniform(UINT32_MAX))+\(Date.timeIntervalSinceReferenceDate)+\(arc4random_uniform(UINT32_MAX))".data(using: .utf8)?.base64EncodedString()
-        return string!
+ 
     }
 }
