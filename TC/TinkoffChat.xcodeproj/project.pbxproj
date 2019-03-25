@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CA0510B2242B046003AA4A5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA0510A2242B046003AA4A5 /* File.swift */; };
+		1CB60D7022495AE70012FBF7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB60D6F22495AE70012FBF7 /* CoreDataStack.swift */; };
 		39044E1D216FC49500B89573 /* ThemesVC delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39044E1C216FC49500B89573 /* ThemesVC delegate.swift */; };
 		39044E1F21713F5300B89573 /* Themes.m in Sources */ = {isa = PBXBuildFile; fileRef = 39044E1E21713F5300B89573 /* Themes.m */; };
 		3954D84321824C8D006E8AE3 /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3954D84221824C8D006E8AE3 /* Communicator.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CA0510A2242B046003AA4A5 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		1CB60D6F22495AE70012FBF7 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		39044E14216FB52500B89573 /* TinkoffChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TinkoffChat-Bridging-Header.h"; sourceTree = "<group>"; };
 		39044E15216FB52500B89573 /* ThemesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThemesViewController.h; sourceTree = "<group>"; tabWidth = 4; };
 		39044E16216FB52500B89573 /* ThemesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThemesViewController.m; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 				3959B34E218462BE00CDC3FD /* DataManagers */,
 				39DAF668217B08610043394F /* Profile.swift */,
 				3954D8482182F981006E8AE3 /* Communication Models */,
+				1CB60D6F22495AE70012FBF7 /* CoreDataStack.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 		39B4E569217328E900772481 /* ThemesViewController */ = {
 			isa = PBXGroup;
 			children = (
+				39044E14216FB52500B89573 /* TinkoffChat-Bridging-Header.h */,
 				39044E1B216FB82800B89573 /* ThemesViewControllerDelegate.h */,
 				39B4E556217238D500772481 /* ThemesViewController.swift */,
 				39044E15216FB52500B89573 /* ThemesViewController.h */,
@@ -243,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				39CD89AA2153E29F00D7A2BA /* AppDelegate.swift */,
+				1CA0510A2242B046003AA4A5 /* File.swift */,
 				39DDEB71215D35F00028EC77 /* ProfileViewController */,
 				39CD89AE2153E29F00D7A2BA /* Main.storyboard */,
 				39CD89B12153E2A000D7A2BA /* Assets.xcassets */,
@@ -254,7 +261,6 @@
 				399C3CB821673E2800237FC4 /* ConversationListViewController */,
 				398A8F2D2167BD0500FB7EF1 /* ConversationViewController */,
 				39B4E569217328E900772481 /* ThemesViewController */,
-				39044E14216FB52500B89573 /* TinkoffChat-Bridging-Header.h */,
 			);
 			path = TinkoffChat;
 			sourceTree = "<group>";
@@ -362,6 +368,7 @@
 				39CD89F521554BB600D7A2BA /* CustomStringConvertible.swift in Sources */,
 				398A8F2C2167B9E700FB7EF1 /* ConversationViewController.swift in Sources */,
 				399C3CAC2166805000237FC4 /* ConversationList TableView.swift in Sources */,
+				1CA0510B2242B046003AA4A5 /* File.swift in Sources */,
 				399C3CB221668AB400237FC4 /* ConversationCellConfiguration.swift in Sources */,
 				39044E1F21713F5300B89573 /* Themes.m in Sources */,
 				39DAF667217AFDAC0043394F /* GCDDataManager.swift in Sources */,
@@ -371,6 +378,7 @@
 				39CD89AD2153E29F00D7A2BA /* ProfileViewController.swift in Sources */,
 				398A8F2F2167CF4100FB7EF1 /* MessageTableViewCell.swift in Sources */,
 				399C3CAA2166291D00237FC4 /* ConversationListViewController.swift in Sources */,
+				1CB60D7022495AE70012FBF7 /* CoreDataStack.swift in Sources */,
 				39CD89AB2153E29F00D7A2BA /* AppDelegate.swift in Sources */,
 				3954D84C2182F9B6006E8AE3 /* MC extensions.swift in Sources */,
 				3954D85221834B4D006E8AE3 /* CommunicationIntegrate.swift in Sources */,
