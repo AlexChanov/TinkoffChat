@@ -19,6 +19,17 @@ class CoreDataStack {
         return docUrl
     }()
     
+    private lazy var persistentCoordinator: NSPersistentStoreCoordinator = {
+        guard let mom = Bundle.main.url(forResource: "DataModel", withExtension: "momd") else { fatalError("Can't search the resource") }
+        guard let objectModel = NSManagedObjectModel(contentsOf: mom) else { fatalError("Can't search the object model by this url: \(mom)") }
+        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: objectModel)
+        do {
+            try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: nil)
+        } catch let error {
+            assert(false, "Error due try to add store at url \(storeURL) with description \(error.localizedDescription)")
+        }
+        return coordinator
+    }()
     
     lazy var saveContext: NSManagedObjectContext = {
         let context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
