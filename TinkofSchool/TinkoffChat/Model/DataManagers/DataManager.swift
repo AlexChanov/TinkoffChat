@@ -11,10 +11,6 @@ import Foundation
 typealias CompletionSaveHandler = (Error?) -> Void
 typealias CompletionProfileLoader = (Profile) -> Void
 
-protocol DataManager {
-    func getProfile(completion: @escaping CompletionProfileLoader)
-    func saveProfile(newProfile: Profile, oldProfile: Profile, completion: @escaping CompletionSaveHandler)
-}
 
 enum SaveErrors: Error {
     case convertDataError
