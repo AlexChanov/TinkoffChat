@@ -15,6 +15,16 @@ struct GCDDataManager: DataManager {
     // делаем очередь последовательной, чтобы избежать race condition,
     // т.к. если попробовать загрузить профиль во время сохранения, может загрузиться старый профиль
     let syncQueue = DispatchQueue(label: "com.chanov", qos: .userInitiated)
+    
+    
+    init() {
+        documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        archiveURL = documentsDirectory.appendingPathComponent("user_profile").appendingPathExtension("plist")
+        operationQueue.qualityOfService = .userInitiated
+        // делаем очередь последовательной, чтобы избежать race condition,
+        // т.к. если попробовать загрузить профиль во время сохранения, может загрузиться старый профиль
+        operationQueue.maxConcurrentOperationCount = 1
+    }
 
     init() {
         documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
