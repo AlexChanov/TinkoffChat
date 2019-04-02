@@ -13,15 +13,7 @@ struct OperationDataManager: DataManager {
     var archiveURL: URL
     let operationQueue = OperationQueue()
 
-    init() {
-        documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        archiveURL = documentsDirectory.appendingPathComponent("user_profile").appendingPathExtension("plist")
-        operationQueue.qualityOfService = .userInitiated
-        // делаем очередь последовательной, чтобы избежать race condition,
-        // т.к. если попробовать загрузить профиль во время сохранения, может загрузиться старый профиль
-        operationQueue.maxConcurrentOperationCount = 1
-    }
-
+   
     func saveProfile(newProfile: Profile, oldProfile: Profile, completion: @escaping CompletionSaveHandler) {
         let saveOperation = SaveProfileOperation()
         saveOperation.archiveURL = archiveURL
