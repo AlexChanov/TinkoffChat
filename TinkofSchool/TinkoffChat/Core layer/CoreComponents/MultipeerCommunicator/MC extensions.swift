@@ -67,7 +67,5 @@ extension MultipeerCommunicator: MCNearbyServiceBrowserDelegate, MCNearbyService
             info["eventType"] == "TextMessage" else { return }
         delegate?.didReceiveMessage(text: info["text"]!, fromUser: peerID.displayName, toUser: localPeerId.displayName)
     }
-    
-    
 
 }

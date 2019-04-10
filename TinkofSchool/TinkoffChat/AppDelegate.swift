@@ -52,7 +52,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         logger.printStateLog(#function, to: "not running", didMoved: false)
     }
-    
-    
 
 }
