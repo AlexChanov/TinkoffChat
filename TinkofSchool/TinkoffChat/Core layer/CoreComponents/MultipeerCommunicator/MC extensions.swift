@@ -67,5 +67,27 @@ extension MultipeerCommunicator: MCNearbyServiceBrowserDelegate, MCNearbyService
             info["eventType"] == "TextMessage" else { return }
         delegate?.didReceiveMessage(text: info["text"]!, fromUser: peerID.displayName, toUser: localPeerId.displayName)
     }
+    
+    func browser(_ browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: Error) {
+        delegate?.failedToStartBrowsingForUsers(error: error)
+    }
+    
+    func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didNotStartAdvertisingPeer error: Error) {
+        delegate?.failedToStartAdvertising(error: error)
+    }
+    
+    func advertiser(_ advertiser: MCNearbyServiceAdvertiser,
+                    didReceiveInvitationFromPeer peerID: MCPeerID,
+                    withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
+        let session = getSession(with: peerID)
+        invitationHandler(true, session)
+    }
+    
+    func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
+        let jsonDecoder = JSONDecoder()
+        guard let info = try? jsonDecoder.decode([String: String].self, from: data),
+            info["eventType"] == "TextMessage" else { return }
+        delegate?.didReceiveMessage(text: info["text"]!, fromUser: peerID.displayName, toUser: localPeerId.displayName)
+    }
 
 }

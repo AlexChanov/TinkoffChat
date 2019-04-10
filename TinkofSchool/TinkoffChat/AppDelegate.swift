@@ -53,19 +53,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         logger.printStateLog(#function, to: "not running", didMoved: false)
     }
     
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        logger.printStateLog(#function, to: "inactive", didMoved: false)
-    }
     
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        let communicationManager = rootAssembly.presentationAssembly.serviceAssembly.communicationManager
-        communicationManager.didStartSessions()
-        logger.printStateLog(#function, to: "\(UIApplication.shared.applicationState)", didMoved: true)
-    }
-    
-    func applicationWillTerminate(_ application: UIApplication) {
-        
-        logger.printStateLog(#function, to: "not running", didMoved: false)
-    }
 
 }
