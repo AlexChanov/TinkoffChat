@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  TinkoffChat
 //
-//  Created by Алексей ]Чанов on 20/03/2019.
+//  Created by Алексей ]Чанов on 12/03/2019.
 //  Copyright © 2019 Алексей Чанов. All rights reserved.
 //
 
@@ -13,6 +13,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let logger = Logger.shared
+    let rootAssembly = RootAssembly()
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         if let themeData = UserDefaults.standard.value(forKey: "Theme") as? Data,
@@ -22,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UINavigationBar.appearance().barTintColor = UIColor.green
         }
         logger.printStateLog(#function, to: "\(UIApplication.shared.applicationState)", didMoved: true)
+        guard let rootVC = window?.rootViewController as? UINavigationController,
+            let conversationVC = rootVC.topViewController as? ConversationListViewController else { return true }
+        conversationVC.assembly = rootAssembly.presentationAssembly
+        conversationVC.conversationListInteractor = rootAssembly.presentationAssembly.getConversationListInteractor()
         return true
     }
 
@@ -38,7 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        CommunicationManager.shared.didStartSessions()
+        let communicationManager = rootAssembly.presentationAssembly.serviceAssembly.communicationManager
+        communicationManager.didStartSessions()
         logger.printStateLog(#function, to: "\(UIApplication.shared.applicationState)", didMoved: true)
     }
 
