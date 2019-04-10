@@ -25,7 +25,17 @@ class ConversationFetchRequester: IConversationFetchRequester {
         return request
     }
 
-   
+    func fetchOnlineConversations() -> NSFetchRequest<Conversation> {
+        let request: NSFetchRequest<Conversation> = Conversation.fetchRequest()
+        request.predicate = NSPredicate(format: "isOnline == YES")
+        return request
+    }
+
+    func fetchConversationWith(conversationId: String) -> NSFetchRequest<Conversation> {
+        let request: NSFetchRequest<Conversation> = Conversation.fetchRequest()
+        request.predicate = NSPredicate(format: "conversationId == %@", conversationId)
+        return request
+    }
 
     func fetchNonEmptyOnlineConversations() -> NSFetchRequest<Conversation> {
         let request: NSFetchRequest<Conversation> = Conversation.fetchRequest()

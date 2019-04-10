@@ -21,9 +21,5 @@ class UserFetchRequester: IUserFetchRequester {
         return request
     }
 
-    func fetchOnlineUsers() -> NSFetchRequest<User> {
-        let request: NSFetchRequest<User> = User.fetchRequest()
-        request.predicate = NSPredicate(format: "isOnline == YES")
-        return request
-    }
+    
 }
