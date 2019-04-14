@@ -3,7 +3,7 @@
 //  TinkoffChat
 //
 //  Created by Алексей ]Чанов on 20/03/2019.
-//  Copyright © 2019 Алексей Чанов. All rights reserved.
+//  Copyright © 2019 Чанов Алексей. All rights reserved.
 //
 
 import MultipeerConnectivity
@@ -67,7 +67,5 @@ extension MultipeerCommunicator: MCNearbyServiceBrowserDelegate, MCNearbyService
             info["eventType"] == "TextMessage" else { return }
         delegate?.didReceiveMessage(text: info["text"]!, fromUser: peerID.displayName, toUser: localPeerId.displayName)
     }
-    
-    
 
 }

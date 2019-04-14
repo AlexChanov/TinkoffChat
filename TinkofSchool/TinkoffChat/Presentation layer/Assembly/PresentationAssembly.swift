@@ -2,8 +2,8 @@
 //  PresentationAssembly.swift
 //  TinkoffChat
 //
-//  Created by Алексей ]Чанов on 24/03/2019.
-//  Copyright © 2019 Алексей Чанов. All rights reserved.
+//  Created by Алексей ]Чанов on 20/03/2019.
+//  Copyright © 2019 Чанов Алексей. All rights reserved.
 //
 
 import Foundation
@@ -13,6 +13,7 @@ protocol IPresentationAssembly {
     func getConversationListInteractor() -> IConversationListFetcher
     func getConversationInteractor() -> IConversationInteractor
     func getProfileInteractor() -> IProfileInteractor
+    func getImageLoaderInteractor() -> IImageLoaderInteractor
 }
 
 class PresentationAssembly: IPresentationAssembly {
@@ -28,6 +29,11 @@ class PresentationAssembly: IPresentationAssembly {
 
     func getProfileInteractor() -> IProfileInteractor {
         return ProfileInteractor(profileDataManager: serviceAssembly.profileDataManager)
+    }
+
+    func getImageLoaderInteractor() -> IImageLoaderInteractor {
+        return ImageLoaderInteractor(networkManager: serviceAssembly.imagesNetworkManager,
+                                     imageDownloadManager: serviceAssembly.imageDownloadManager)
     }
 
     init(serviceAssembly: IServiceAssembly) {

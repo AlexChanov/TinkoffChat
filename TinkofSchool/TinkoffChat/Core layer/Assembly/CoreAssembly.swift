@@ -3,7 +3,7 @@
 //  TinkoffChat
 //
 //  Created by Алексей ]Чанов on 20/03/2019.
-//  Copyright © 2019 Алексей Чанов. All rights reserved.
+//  Copyright © 2019 Чанов Алексей. All rights reserved.
 //
 
 import Foundation
@@ -14,6 +14,9 @@ protocol ICoreAssembly {
     var conversationRequester: IConversationFetchRequester { get }
     var userRequester: IUserFetchRequester { get }
     var messageRequester: IMessageFetchRequester { get }
+    var requestSender: IRequestSender { get }
+    var imageDwnldrConfig: RequestConfig<ImageRequestsStorageParser> { get }
+    var imageProvider: IImageProvider { get }
 }
 
 class CoreAssembly: ICoreAssembly {
@@ -22,4 +25,7 @@ class CoreAssembly: ICoreAssembly {
     lazy var conversationRequester: IConversationFetchRequester = ConversationFetchRequester()
     lazy var userRequester: IUserFetchRequester = UserFetchRequester()
     lazy var messageRequester: IMessageFetchRequester = MessageFetchRequester()
+    lazy var requestSender: IRequestSender = RequestSender()
+    lazy var imageDwnldrConfig = RequestsFactory.ImageLoaderFactory.imageDownloaderConfig()
+    lazy var imageProvider: IImageProvider = ImageProvider.shared
 }

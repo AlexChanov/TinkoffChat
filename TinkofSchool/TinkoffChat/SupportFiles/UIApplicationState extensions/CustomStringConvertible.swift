@@ -2,8 +2,8 @@
 //  UIApplicationState extensions.swift
 //  TinkoffChat
 //
-//  Created by Алексей ]Чанов on 24/03/2019.
-//  Copyright © 2019 Алексей Чанов. All rights reserved.
+//  Created by Алексей ]Чанов on 20/03/2019.
+//  Copyright © 2019 Алексей. All rights reserved.
 //
 
 import Foundation
