@@ -30,6 +30,8 @@ extension MultipeerCommunicator: MCNearbyServiceBrowserDelegate, MCNearbyService
             print("Current state for session with \(peerID.displayName) is connecting")
         case .connected:
             print("Current state for session with \(peerID.displayName) is connected")
+        @unknown default:
+            print("Current state for session with \(peerID.displayName) is unknown, \(state)")
         }
     }
 

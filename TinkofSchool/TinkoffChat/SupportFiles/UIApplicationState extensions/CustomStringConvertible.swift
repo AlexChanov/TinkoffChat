@@ -18,6 +18,8 @@ extension UIApplication.State: CustomStringConvertible {
             return("inactive")
         case .background:
             return("background")
+        @unknown default:
+            return("unknown")
         }
     }
 }
