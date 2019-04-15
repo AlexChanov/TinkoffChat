@@ -44,7 +44,22 @@ class NestedWorkersCoreDataStack: CoreDataStack {
         return coordinator
     }()
 
-    
+    lazy var saveContext: NSManagedObjectContext = {
+        let context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        context.parent = mainContext
+        context.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        context.undoManager = nil
+        return context
+    }()
+
+    lazy var mainContext: NSManagedObjectContext = {
+        let context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        context.parent = masterContext
+        context.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump
+        context.undoManager = nil
+        return context
+    }()
+
     lazy var masterContext: NSManagedObjectContext = {
         let context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
         context.persistentStoreCoordinator = persistentCoordinator
