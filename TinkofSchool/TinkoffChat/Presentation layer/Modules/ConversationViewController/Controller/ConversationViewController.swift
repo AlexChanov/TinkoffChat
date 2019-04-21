@@ -136,30 +136,7 @@ class ConversationViewController: UIViewController, CommunicationHandler, Commun
         }
     }
 
-    func animateSendButton() {
-        let transform = CATransform3DMakeScale(1.1, 1.1, 1)
-        let firstAnimation = CABasicAnimation(keyPath: "transform")
-        firstAnimation.toValue = transform
-        firstAnimation.duration = 1
-        firstAnimation.fillMode = .forwards
-        let secondAnimation = CABasicAnimation(keyPath: "transform")
-        secondAnimation.toValue = CATransform3DIdentity
-        secondAnimation.beginTime = 1.5
-        secondAnimation.duration = 1
-        secondAnimation.fillMode = .forwards
-        let group = CAAnimationGroup()
-        group.duration = 3.5
-        group.animations = [firstAnimation, secondAnimation]
-        let newColor = canSendMessage ? UIColor.blue : UIColor.gray
-        let colorAnimation = CABasicAnimation(keyPath: "backgroundColor")
-        colorAnimation.beginTime = firstAnimation.beginTime
-        colorAnimation.fromValue = sendButton.backgroundColor!.cgColor
-        colorAnimation.toValue = newColor.cgColor
-        colorAnimation.duration = 3.5
-        sendButton.layer.add(group, forKey: nil)
-        sendButton.layer.add(colorAnimation, forKey: nil)
-        sendButton.backgroundColor = newColor
-    }
+    
 
     func animateNameLabel() {
         let scaleFactor = conversation.isOnline ? 1.0 : 1.0/1.1
@@ -178,13 +155,7 @@ class ConversationViewController: UIViewController, CommunicationHandler, Commun
         }
     }
 
-    func updateSendButton() {
-        if messageTextField.text == "" {
-            canSendMessage = false
-        } else if conversation.isOnline {
-            canSendMessage = true
-        }
-    }
+  
     // MARK: - User Interactions
 
     @IBAction func messageTextChanged(_ sender: UITextField) {
