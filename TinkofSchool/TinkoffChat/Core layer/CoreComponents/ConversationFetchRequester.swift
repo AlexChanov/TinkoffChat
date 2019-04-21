@@ -8,12 +8,7 @@
 
 import CoreData
 
-protocol IConversationFetchRequester {
-    func fetchConversations() -> NSFetchRequest<Conversation>
-    func fetchOnlineConversations() -> NSFetchRequest<Conversation>
-    func fetchConversationWith(conversationId: String) -> NSFetchRequest<Conversation>
-    func fetchNonEmptyOnlineConversations() -> NSFetchRequest<Conversation>
-}
+
 
 class ConversationFetchRequester: IConversationFetchRequester {
 
