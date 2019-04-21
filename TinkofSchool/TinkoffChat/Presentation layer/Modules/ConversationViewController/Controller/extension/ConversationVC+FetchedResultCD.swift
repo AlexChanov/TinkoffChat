@@ -30,6 +30,8 @@ extension ConversationViewController: NSFetchedResultsControllerDelegate {
         case .move:
             tableView.deleteRows(at: [indexPath!], with: .none)
             tableView.insertRows(at: [newIndexPath!], with: .none)
+        @unknown default:
+            return
         }
     }
 }
